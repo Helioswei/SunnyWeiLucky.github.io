@@ -1,6 +1,6 @@
 ---
 title: centos7-常用的命令
-categories: Centos7
+categories: [Linux,centos7]
 abbrlink: 2689943165
 date: 2020-05-06 14:52:04
 tags: 

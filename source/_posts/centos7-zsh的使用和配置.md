@@ -1,7 +1,6 @@
 ---
 title: centos7-zsh的使用和配置
-categories:
-  - Centos7
+categories: [Linux,centos7]
 tags:
   - zsh
 abbrlink: 192192511
