@@ -109,21 +109,6 @@
       </tags>
   </entry>
   <entry>
-    <title>centos7-zsh的使用和配置</title>
-    <url>/article/192192511.html</url>
-    <content><![CDATA[<p>​     本文主要是记录centos7搭建自己个性的命令行。</p>
-<h3 id="安装zsh"><a href="#安装zsh" class="headerlink" title="安装zsh"></a>安装zsh</h3><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">yum install zsh</span><br></pre></td></tr></table></figure>
-<h4 id="将其设置为默认shell"><a href="#将其设置为默认shell" class="headerlink" title="将其设置为默认shell"></a>将其设置为默认shell</h4><p>~~~`<br>chsh -s /bin/zsh<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">&#96;可以通过echo $SHELL来查看当前默认的shell，如果没有改为&#x2F;bin&#x2F;zsh,那么需要重新启动shell&#96;</span><br><span class="line"></span><br><span class="line">### 安装oh-my-zsh</span><br><span class="line"></span><br><span class="line">[地址](https:&#x2F;&#x2F;github.com&#x2F;ohmyzsh&#x2F;ohmyzsh)</span><br><span class="line"></span><br></pre></td></tr></table></figure><br>    sh -c “$(wget -O- <a href="https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)&quot;">https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)&quot;</a><br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">#### 配置文件</span><br><span class="line"></span><br><span class="line">​	默认的配置文件是在&#96;&#x2F;root&#x2F;.zshrc&#96;，可以通过配置文件来配置一下插件以及功能</span><br><span class="line"></span><br><span class="line">##### 主题修改</span><br><span class="line"></span><br><span class="line">在&#96;.zshrc&#96;中找到&#96;ZSH_THEME&#96;，即可修改主题，[主题地址](https:&#x2F;&#x2F;github.com&#x2F;ohmyzsh&#x2F;ohmyzsh&#x2F;wiki&#x2F;themes)可自己修改</span><br><span class="line"></span><br><span class="line">##### zsh扩展</span><br><span class="line"></span><br><span class="line">​	在&#96;&#x2F;root&#x2F;.zshrc&#96;中找到&#96;plugins&#96;关键字，就可以自定义启用的插件了，目前插件存放在workspace上</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure></p>
-]]></content>
-      <categories>
-        <category>Linux</category>
-        <category>centos7</category>
-      </categories>
-      <tags>
-        <tag>zsh</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>centos7-yum的使用</title>
     <url>/article/1714992348.html</url>
     <content><![CDATA[<p>记录yum的使用</p>
@@ -137,6 +122,21 @@
       </categories>
       <tags>
         <tag>yum</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>centos7-zsh的使用和配置</title>
+    <url>/article/192192511.html</url>
+    <content><![CDATA[<p>​     本文主要是记录centos7搭建自己个性的命令行。</p>
+<h3 id="安装zsh"><a href="#安装zsh" class="headerlink" title="安装zsh"></a>安装zsh</h3><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">yum install zsh</span><br></pre></td></tr></table></figure>
+<h4 id="将其设置为默认shell"><a href="#将其设置为默认shell" class="headerlink" title="将其设置为默认shell"></a>将其设置为默认shell</h4><p>~~~`<br>chsh -s /bin/zsh<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">&#96;可以通过echo $SHELL来查看当前默认的shell，如果没有改为&#x2F;bin&#x2F;zsh,那么需要重新启动shell&#96;</span><br><span class="line"></span><br><span class="line">### 安装oh-my-zsh</span><br><span class="line"></span><br><span class="line">[地址](https:&#x2F;&#x2F;github.com&#x2F;ohmyzsh&#x2F;ohmyzsh)</span><br><span class="line"></span><br></pre></td></tr></table></figure><br>    sh -c “$(wget -O- <a href="https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)&quot;">https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)&quot;</a><br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">#### 配置文件</span><br><span class="line"></span><br><span class="line">​	默认的配置文件是在&#96;&#x2F;root&#x2F;.zshrc&#96;，可以通过配置文件来配置一下插件以及功能</span><br><span class="line"></span><br><span class="line">##### 主题修改</span><br><span class="line"></span><br><span class="line">在&#96;.zshrc&#96;中找到&#96;ZSH_THEME&#96;，即可修改主题，[主题地址](https:&#x2F;&#x2F;github.com&#x2F;ohmyzsh&#x2F;ohmyzsh&#x2F;wiki&#x2F;themes)可自己修改</span><br><span class="line"></span><br><span class="line">##### zsh扩展</span><br><span class="line"></span><br><span class="line">​	在&#96;&#x2F;root&#x2F;.zshrc&#96;中找到&#96;plugins&#96;关键字，就可以自定义启用的插件了，目前插件存放在workspace上</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure></p>
+]]></content>
+      <categories>
+        <category>Linux</category>
+        <category>centos7</category>
+      </categories>
+      <tags>
+        <tag>zsh</tag>
       </tags>
   </entry>
   <entry>
@@ -232,6 +232,27 @@
       </tags>
   </entry>
   <entry>
+    <title>cpp-devtoolset切换gcc的版本</title>
+    <url>/article/2538200340.html</url>
+    <content><![CDATA[<p>我们在编译cpp的时候，有时候需要支持c++11/14的一些特性，就需要升级gcc的版本，为了简单的升级，Red Hat提供了scl软件集来为用户提供一种以方便、安全地安装和使用应用程序和运行时环境的多个（而且可能是更新的）版本的方式，同时避免把系统搞乱。下载devtoolset</p>
+<p>使用scl升级gcc的步骤</p>
+<h3 id="一，安装scl源"><a href="#一，安装scl源" class="headerlink" title="一，安装scl源"></a>一，安装scl源</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">yum install centos-release-scl scl-utils-build</span><br></pre></td></tr></table></figure>
+<h3 id="二，列出scl有哪些可用的源"><a href="#二，列出scl有哪些可用的源" class="headerlink" title="二，列出scl有哪些可用的源"></a>二，列出scl有哪些可用的源</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">yum list all --enablerepo&#x3D;&#39;centos-sclo-rh&#39; | grep devtoolset</span><br></pre></td></tr></table></figure>
+<h3 id="三，安装gcc，g"><a href="#三，安装gcc，g" class="headerlink" title="三，安装gcc，g++"></a>三，安装gcc，g++</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">yum install devtoolset-7-gcc devtoolset-7-gcc-c++</span><br></pre></td></tr></table></figure>
+<h3 id="四，切换版本"><a href="#四，切换版本" class="headerlink" title="四，切换版本"></a>四，切换版本</h3><p>这个版本的切换仅对当前的环境有用</p>
+<h5 id="启动环境"><a href="#启动环境" class="headerlink" title="启动环境"></a>启动环境</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">scl enable devtoolset-7 bash</span><br><span class="line">gcc -v</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h5 id="退出环境"><a href="#退出环境" class="headerlink" title="退出环境"></a>退出环境</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">exit</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>Cpp</category>
+        <category>gcc</category>
+      </categories>
+      <tags>
+        <tag>gcc</tag>
+        <tag>devtoolset</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>cpp-gtest集成Lcov代码覆盖率测试</title>
     <url>/article/3264464113.html</url>
     <content><![CDATA[<p>​    做好了单元测试但是别人并不知道我们的单元测试做的如何，是否覆盖了所有的需要被测试的类方法或者变量等，所以我们需要对单测case做一个覆盖率统计。其实本质就是看代码执行时候运行了你需要测试文件里面的所有代码，比如switch分支 if分支等。</p>
@@ -291,27 +312,6 @@
       <tags>
         <tag>gtest</tag>
         <tag>lcov</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>cpp-devtoolset切换gcc的版本</title>
-    <url>/article/2538200340.html</url>
-    <content><![CDATA[<p>我们在编译cpp的时候，有时候需要支持c++11/14的一些特性，就需要升级gcc的版本，为了简单的升级，Red Hat提供了scl软件集来为用户提供一种以方便、安全地安装和使用应用程序和运行时环境的多个（而且可能是更新的）版本的方式，同时避免把系统搞乱。下载devtoolset</p>
-<p>使用scl升级gcc的步骤</p>
-<h3 id="一，安装scl源"><a href="#一，安装scl源" class="headerlink" title="一，安装scl源"></a>一，安装scl源</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">yum install centos-release-scl scl-utils-build</span><br></pre></td></tr></table></figure>
-<h3 id="二，列出scl有哪些可用的源"><a href="#二，列出scl有哪些可用的源" class="headerlink" title="二，列出scl有哪些可用的源"></a>二，列出scl有哪些可用的源</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">yum list all --enablerepo&#x3D;&#39;centos-sclo-rh&#39; | grep devtoolset</span><br></pre></td></tr></table></figure>
-<h3 id="三，安装gcc，g"><a href="#三，安装gcc，g" class="headerlink" title="三，安装gcc，g++"></a>三，安装gcc，g++</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">yum install devtoolset-7-gcc devtoolset-7-gcc-c++</span><br></pre></td></tr></table></figure>
-<h3 id="四，切换版本"><a href="#四，切换版本" class="headerlink" title="四，切换版本"></a>四，切换版本</h3><p>这个版本的切换仅对当前的环境有用</p>
-<h5 id="启动环境"><a href="#启动环境" class="headerlink" title="启动环境"></a>启动环境</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">scl enable devtoolset-7 bash</span><br><span class="line">gcc -v</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<h5 id="退出环境"><a href="#退出环境" class="headerlink" title="退出环境"></a>退出环境</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">exit</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>Cpp</category>
-        <category>gcc</category>
-      </categories>
-      <tags>
-        <tag>gcc</tag>
-        <tag>devtoolset</tag>
       </tags>
   </entry>
   <entry>
@@ -464,6 +464,25 @@
       </tags>
   </entry>
   <entry>
+    <title>cpp-学习计划</title>
+    <url>/article/3248960382.html</url>
+    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="抱歉, 这个密码看着不太对, 请再试试." data-whm="抱歉, 这个文章不能被校验, 不过您还是能看看解密后的内容.">
+  <script id="hbeData" type="hbeData" data-hmacdigest="0196dd85c43caac64bbfa355b3ca5e3e5665c94318adcf7a800c9b43f13c4a6b">fb9f6fbb8fc1d993240686705025b43532348148d53fb91ba5b377f724fe5b62c8b3848ff11810ef0eef03060f6fa9f6e50d44b812aff7d5fdc4437d49bc3ec3e31345cea2d12cf0e10c9263a9a720edff928b1331435c3804bd25a85f9996d78dbbe9dc1d7b7f8b067c0e6ab72a5244de9bfb995d4843af7c253efaf6e2fec00b653d0a3d104ff27b30871fa5d9d573046181f461ad2df13ae2a784c5beefb1a453a0e4f92a555e1053de39ef1ad8fad0b97503b1b218349f9fbad1388bc847448b3e178d64e5d1272e1f401c1edf874c176a20d808f075129a21b0aad9e0c5053566f26dc591b18fd817f14a3f907f1d35de0afe1f1ebde4dbfc57a6cf7e9d512dea436830ac2bf71fc1345931b2309bc730a8463fab9cdc10dde3ae2f2503c266c6bba6609f08b9245d973d3882cafb7c9f3447a40deddaec734cc607cde984d0098163d6ce69eaa1b3b794082e61455b2bf6f9791d3ae907269f301b98eeaffffc22a4f4213e858894cacce10edde3da2679e75f6ab333a2ce5d686868e18f8cb03814d2479f0e2774efb5530cd77f2d3e8c4ed354e8240481d4477536828e5d6af0b50eb43d8c362395dae9b6efa53ff7d5c71208134ebb53f662635c4435365e35059de2fe2c6aff04d13d64b7a8b2fa751922a8c9872b28efba30596ba9004699cb3dcd4896ba2f234a8a434299ab5d94f38a1bfeb6c861fdcdd70bd84de3aa5eafd0d45145028488924eb8963f37593d7b03cf6516781ec062f0933839c13aa332a5a3abed20e6f9e7b066143f36b909c51b98a637866fc8c63f27e4b0a836a6b8bd6bcf8a20920faa431370ca45d096c4efa237a1ce0d2b2cc70cef5d6672d0fd33f8ab6af34e5b720999286593004dfc75a83a0df6f3e79689d83614c02297619315243468250579241ac8d03ef9320c1173c9eb3727c5a9779f768c7acac2fa606d7009d5ec15b98238bc474fb5e8d96ca52a319f99c739272c909daa79a2ac59ede1fff686176c4ce47ef8db249073cb831fdbc94fd55be03fada6fb13910d71ad18fbed5f86da55552236642859ac12f99e1635a22b4e9a886d55e4d4834511c241fb7f66de318550fcd3dcfb141970e8099d8cacdd43feef3afc171dc1f4650d52966b8cf092c43a37bb5b29c793aaa8cd52cfac690cb4cefb837a9a030505cd5f147cc3abb5d372718f083412da4c91a7c905c9e2b6528bd1bdc597648351606f4e70705a3a34a1fc4b83b609f2d8e7efc299a2cea4df796897048acafe9247e9a32b366af8244bf3cfedef1676044f44d26c823a4fec672faa053f71a5e765ac5dfde7b3616fa20d1b68fbcea0d67bd8bff3548f9ce657cbf79bfcb9272b9213c27e3e1cce80a4c228191ab3eec2b305a504292053d2ee78dc4caf283f5d32a48511ebdaac7a2176736c5b5b53258376fc3acc4138d8c3c5affa138da0a531334c5c53668eeb661d8ff995bb95d46ab48b5c16c89f89682434830801d63b7cfdae2458797ac9455e6021abecc847a17dbec5279ac984e77e90178e45ad1f7dc718d03759f3790c04d63264ff7815b7827d475a8b4cea58f1496ef0e696e487776bea8e6f66627077826229f4ced8d7ac6e5a9a1ae2ef09087cf7082930a040787ec1ddef886de4f884765a767cbc5f11793aae222f1bdcc6e35f67e2303ec93a1c10955dcc7156fe6c8f33b7211e9d90949c2a6c16207e963dd1403631e51d78bed697b6622212222b5c4109fe1c17574ff39ffb83a1d1c40575109615873079a3b95533ebbcbe72219fabf30c055a666eebd0ad025c3d663bca9131a82bf044fc51f9b13b9c0d51d51bdc28afd7476f351f50ecd5fd7cf1a5bf40d1c9d8b5692ac443ee18e1d1c47aa917dfec4e4d09246e1329267c9689577bf566fc6f3c6678bbaf2478adcea5809aa0a187b10dc8ad3a9990ed11a137a943315ff6f2fee9ab0b4d3ba8200e905b8301f5e037f975ec74ff1c7037921ecff9d002f04a8f83de136bf2ae447c1a92ec0d6a748cde1873ccaf3685803bdd1704e36ca7dad35236f4f913be709b6f8d7db12a553cc51c987058dbca05bcc396776d0c7ccf09dde0421f7f5bcccaa72b155060d4fe21d2e69ef492dbcace542be74bb46b328f2b5f017769d70370ae612147433110cb3b92ad72ebcc65c4467f6b04f2356483a9d0315e1186e2b55b9ba7c115c5855110d0eea323935da0316bf635c30f0f6adb6f253636090a0ed43f446d5a36dec9915b76c2d0c67d79a8d10e23a22dfe99b3691f3b056251488e7075994b6e00293f01d9730a3478f91fbe388a4ddfc13ab17017ed0a41eaa371121b20511491082fe2d865ea70fb5c58a231a586facb8c99d0975f0afa7e3fffe76b274e7ee5fcafc01ef9cd5d1779405a2748aebea29238d6de71e7a38202c277ec706d82778f9f0da2121780b6bb799d3ec265d85bab9ab4706b3be28a403010f1075689e414f37c57b5a85625907a857f8935bcdaa65ab14dc7abe6ffcb4e18493f6693cfb3106cc970629643566821b3e591435255238bfdd1c84cf2e24f299d579ab99f252c7d349362905d8daf2c483922ac63d9b40afdbe23908da7a80b4659260af3704addae263d122e368b8322cffb10024efd238af0d7f17b6f96e15c0a6ddf0329930987dcdf5d15c20f338d44a05b42ab1f4a93a6629bbabc3d8869eb1004dd906af2915a3435680e469678367dd441f098c5f2a24481d93bb610eb3c7a3b5bdcf22c0064756af8d9f02749d21e0daca5f6a862081c72b0a10354436f3f37466663f74d68a3a360fcc44f394cb3c728d137e8dee34270770f2beeeff98e7bf2c4848a8e93a57b0a1c14ca52a4679c2960ae0337a57590acb81ad471c333e8ed3f82bbf44b1cd704f5de2ecc676da91b0bac1eb1685124924fb5fe488dda425554b4e8ae4f98d5f9e2c260a47265f4aa37583cb6556ad425ba9dfbbd999f7da19d5e36ebfb8ae64aabb990901affd2667da1080b37746f6c18dffec796c6d65e9e1336c2afe165e716d7310a2ce5a83ffa2f379e7e24090aa70a734d2fae2611f950d9b7b8f3424a5bd0e6f7434ca14fc2bc21b023802b9f4f602919fcc4be0c6c8ea97af2c8afc31c69201cbc67cf306be629c668a097e87e541925cdc09f786cbb5739895732a53229fc5f552c2299cf2fe909b6a8fe9bf67d5d0118a7fc5be5da51eb34a783371b9c572315f5b4c8999efa0b6943808c3b577d4261acd4cfd94ae63ad0c6e403051c53090d19ee9dc1f772ca5b4e04b0f854329a2380c72f5700b6d1ada5d814155279a0e639a715e0564115e7b26a5ffa51ccb00bb868469a7a8ada54fdaa31e77e35830508db80cb678b7ee3711302733291a440e9a798adea55be57f7876c36a7b408e99e7a59abc028570a1660d54410c2db9b99d896bdd27dee3f115179340ae46d69706dda0ba04acb3471719da4e032fa093de6ed0dfbe8a5ec7ed6942cd877dd2a814146e35e800137747fe32745fb4af60a0bd0d48bcbe53eabf67990a5afd1d68f816390705f539975b5ca49a7e880cf02814e9888a8ea91abf01d552174eb02da00fb8054eb7ea81c6b511e0789f44fec714ff2530ecc1a58bb9b27915d49e5756ec529fbc69e0902e88a33575cf5916b9291460f904856f6902cc7744db997812bbe410e3f550b83e0197b2456624a15a483a700ba3c9efc1c4a607c525afd0f9dffda91388d16410c12b4a83f99414970d8c75c53957ab0327acf9fee92909c19df1189e0cba98f35a29120d68a35d8281cd8d343fe6fc65b9a592d8a6115a97f24f58c116c046b362914e108a3301936537783c4b76082523b3124bcd71a36e5467b1549be4324ada8c6e45ac02fd1aaed8f1c12c1e610f3a7047ef8d4e8e2773039b7b4d7085f04439258c2b490f06bde28a038e23aaf85794bc33b574b6d2726d5ac6397ddfce2bcb91abc1fb3ff540e9d188b84f7cb8aa1a68ec5cc75786fc755d62ae600a2f2c1d648be95d9f2de92a9abaac6417662680073eda6e5838fd171d74cff71dd408708de8f07c6b5667d82c8f7efa69d400adabd6de6557c7e44292b1be77dc90d82b059b3ee01c32852759c59ac421075a7df042e1ad1d3706c3cd864a44f68ae2303f39f6abcab5e15b7de13ba3a1f85867739269fabde5ed340feab5dd24f8e7e86cac8f2981709d3a9f0b3372f468bb8f20ecfcdce7ca059a49d8e61dc12103b5003238343740d14ed45b6000361cb0ab277c34bc3cb1be55fd33dda317540b257d1dd2555ae0a56eafa4fc4da7c705667538a65f6e70c56a1fa04be1905305db0949a6a498481f8fd164d66c2676e9963d96f49371f4ba6dce170c32ab806684ae86df9d20baceb6bc4191e980591f833e648cfff2592c9d866bbce92257f69c946c37235d41ff3d073e1be62f0f2a10cae513e1a5f146ee9198ac9524ff5259f76d62ca0bf9d233361cc1ab6682ddc2f5fa38594a536beecd205d4c8b97d48b1186e934e021baa919d7510bdd114e9ba347747747681593369f4007d8d14ac3336e8ee33f93031297cd4e9279422f6cb1578faeb4b6c35088ad1c16eebd34f39145299d76dc960379f49522efeb96b82fae1294ee4c5b7e13cee8bf295fc64cc51418a5c03387f291560a4fd43969ec69acd874de0d770534731c8b2a3066190ad01c8acad0fd8627bedbdd3a0648de6b684911c61a976afb5a774abea8a00b15407dd79353b38789358783e09908b2d39f5fbdfe5aea98fd478bff5f3a8c55197671ae0442478943e9296338f87ca4862baab3dd55a75c4c6717e3a6b610882a979215747d0d9d9f976a99d4dd1c2f9bc68e9cc39b27696a0a6c6e85ec0052f81b7f10573e7a3b21de433da09e85109a040cd00730e3856fa43372c69da1fee87420ea9591632ed654a299d4a172610cd11c653e1c64c80a1eb9bf60972e6633ed51fa287dfd7c892031c3b2d123466f1b6ddc45ab09e518066e19095a1aa2c674f6e8b24dd09ce7514fcdc508681b7ba4e3dfe106229e246986e05044a3c5f03ac785020592640d3eb2e3a639ce79a72b24cef5dc772fa6831549e2b0d54ce36b241291fcc2a0fe77c61d0d0a21a30f6cad8e934c14809e5adeb0d039b84cfc8a919ec276ccf88ac7139fca948a64f9bf5ef709f7fbe1888fbc137c3fe571e54f3c38c4ee3eff155e17d67a3ca4d223ef50bc3eb1be6e278fc2a65e25432cbb66a6d393cded33bcb6f9de277fd9448947c6302535cf9ad4f8d74f53c004e257e7bb7850a0a48d6bf590c0b2872dceab86c393d34d3908c7b594f2d6212035ba7414f9b48a76c8947363fe631c71f5c031ce822c6a5b8dfcb965dbdc659493c01e63ce3eff2802dcc9b282ce8d1b0d282ae982d8c79e5a85d68b0882012aaf849002424f074fe24cd32fbe212c2b31874159332fdb7ea677008229a65f115b727b8a1cb050e71347f874373f11fcaed4b15693f459779ff2d0a2c978ededc1721167369177387c5b0a28e752abd5592d4d26712a1479959c66ee94f3bf1e514d72f3dc36080675bb10b1b1f84abab3146b66df570e5c74c394edd4718d17b083ce13331963f3440718e04dd48a8df0993c862b94df4718a567169fe65d72f25c6eacb64e18e33bb1239876ab4caf11a490c0330630cbb0fba89d2df42e90c1a3d57619d5992203fda3a6be02288e87416a809dbfecb09919b38e34b1574a9ac2ac71951c6bcbd914643722e1a93cadecb067574909cd2a53efdd2d0fce0f134b61e04c9d4a7ecd4fbe8e07afb3faf698deb9eefd701886f3937cc7b6fe756a6ef7621fb9f717363333fa324378d32057f1a624f5abbb2f1b9a440d82bd54bdf9cc7759645f37c3e397ad89fb679659be2318b83183b9a4fd871fe31f56167c9bd8a822f5d57b125c567c911dd5f3be42e6fbf29df8fe10b4deb123b8de5869ab318513280406c393d55878ebc63be0cb1cf1006b2c1d5320058f99b27420265007bfd6b12f0bd17e62de02296f0717b011acda0b6b288b5f78ae9083f0e841e62494a2d4da4cabd3a940ac2f540c032d196af73f6f66dcaf7da93a6da645000c886984058dbc995d64d032482506db36541084a917b876d087b965b33df63f4753e6a7c51786f5a03887bf5f64dd279a05f8393f937d64e8f983810620e799a60579a3b96699321f6379ff99b2610be9f12b9797d64c97aac7057368946a4a913c55ca66b91cbe900021b3c8188ecb1035d87442851fc3910115d5a85bca5b8644172dcf1a821d1e6321d99b95990aa68cf4231f0802082bf1da01e73df4300cbc9c25edbf1fcf5d964613eaba32190534eb109c97d9311664ebc8107162c91cb9638daba325ed12f9d77338de0a390ffe81123fb0c375d298fd4f7aa6dea0d15d4b8ac3b34e5be0c6575c8f9981d5e48e0e5ea71b2e3686327e6574f225f8c1d539b974be6ce935c814208211724e091d89afb76753b1e806fa141aaeeb1b13bee3b61234ae5ffd8d1fd79289a77e73792b3dce48bf2eea554cee68aefedec7e5e14a3cfa2a34f9920a2f9b7f07bc657ed4fe7f5f7336301b479c91581ded39c05526a603fc8790e47842d5ff1643b5e58a2d85b7e1fffac16708db65ce543180729214c460a5e51367cd3eb63945a5372b75c610e7e666d0cabec7ec4bb8ded012e69d5a1a350cc9734562c4aa98780ffd29769915b112d0a5bfb66fef86eb7b8182b21a53005adfe726028d7d62d6bfa53ff59865b9446df6a749636b448dc29b26df9815d2d4a25dd3a7d72af62e9f85e6b5f5ff09b70470e2e6103eb389e100c5bca3c50eed8896a155881547bbb2ca9036946aef902d074710aef7d822562a85264ae6b62a8f6e3de0766c342101875d7e8eaf9604f85bcb1ce9cb88003550479e8c76577b9697f9e0b3eb812b5bb3fa01d31d97eb6911ff604434a467fd4da1159f88cd4b50ee8b5c023cb570c420fc84d0408375db5126aab836fc62b0b8d7679720f8cdae8f63280eddf6ff79d990b0436ba816251a95672b7cb0a94e452ee02a0375ff54e52da1ead5d777b3be44f2188d574fcdab08235fdd5d834b4b4ae3e8a204e3dc0eae47b7134058d73dbe69fb5f67f5a09acaa36bf00e2e488b951ff29f76d7093aadb6b00e6894a89964bec8475a4d0c916a93db57546f36f1e62a99d792f463fc6abf3f6b88d541831e7a6c31491e7660656e8ef36dd83c28c22f1a667848be16d8b01b060310238ad17ff1325f64251742c580b2d9be39c1130b52edc1a47b3e1e5abfa2c3dddfaa6e470da7dc9fd35c83af6d9acf32a9e6beb68c3b7eba1e6614ef79c9797ffbf38dc99f38f8f359b68d917c77d39f62ab4ed91a23966ceaabc69d120dfb718601b000f312ce85faa81b558374555587be820d706f121fb54cbfdd8fbb2d7009ed4d696d4359462b4572bb50cb2b59697ef5e21cd6cb5edd84f9d1c8da62411193217b7ab0d0b0a29a7ec5dd3468d9d6c7516ac5d4315d4c6598fd856038b1db4d7e0b11aca8de88343eeddfe22e482b5589def594f81455c02754b5c06c3687c3852b3a9266f05f756f3d4426795b624235eb8a79d22f581d8283f5a33f55d05f647147f197cc8989920191b8ce944859ad8aed14e2d78ebd7b8d3a7844d1700517fb6d17586b26e9b8cf50c62613a0256944ede978c132930adec7f782ef2bc5707420c662b3362aba3702ead08856fab6055b92283f92ad68246170a773b012067067f17a2b629afcac4b4d4ea9929ef9172aacf690823fd77c77385f2bdeb768f353f295ef8d582e67d825b179a4727187c96e220bd5f23150124e281f4</script>
+  <div class="hbe hbe-content">
+    <div class="hbe hbe-input hbe-input-flip">
+      <input class="hbe hbe-input-field hbe-input-field-flip" type="password" id="hbePass">
+      <label class="hbe hbe-input-label hbe-input-label-flip" for="hbePass">
+        <span class="hbe hbe-input-label-content hbe-input-label-content-flip" data-content="您好, 这里需要密码。">您好, 这里需要密码。</span>
+      </label>
+    </div>
+  </div>
+</div>
+<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
+      <categories>
+        <category>Cpp</category>
+      </categories>
+  </entry>
+  <entry>
     <title>cpp-日志库LOG的使用</title>
     <url>/article/1373770285.html</url>
     <content><![CDATA[<p>​    在开发的时候，我们经常要写日志，这里提供一个日志库的使用方法；</p>
@@ -490,43 +509,281 @@
       </tags>
   </entry>
   <entry>
-    <title>cpp-学习计划</title>
-    <url>/article/3248960382.html</url>
-    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="抱歉, 这个密码看着不太对, 请再试试." data-whm="抱歉, 这个文章不能被校验, 不过您还是能看看解密后的内容.">
-  <script id="hbeData" type="hbeData" data-hmacdigest="0196dd85c43caac64bbfa355b3ca5e3e5665c94318adcf7a800c9b43f13c4a6b">fb9f6fbb8fc1d993240686705025b43532348148d53fb91ba5b377f724fe5b62c8b3848ff11810ef0eef03060f6fa9f6e50d44b812aff7d5fdc4437d49bc3ec3e31345cea2d12cf0e10c9263a9a720edff928b1331435c3804bd25a85f9996d78dbbe9dc1d7b7f8b067c0e6ab72a5244de9bfb995d4843af7c253efaf6e2fec00b653d0a3d104ff27b30871fa5d9d573046181f461ad2df13ae2a784c5beefb1a453a0e4f92a555e1053de39ef1ad8fad0b97503b1b218349f9fbad1388bc847448b3e178d64e5d1272e1f401c1edf874c176a20d808f075129a21b0aad9e0c5053566f26dc591b18fd817f14a3f907f1d35de0afe1f1ebde4dbfc57a6cf7e9d512dea436830ac2bf71fc1345931b2309bc730a8463fab9cdc10dde3ae2f2503c266c6bba6609f08b9245d973d3882cafb7c9f3447a40deddaec734cc607cde984d0098163d6ce69eaa1b3b794082e61455b2bf6f9791d3ae907269f301b98eeaffffc22a4f4213e858894cacce10edde3da2679e75f6ab333a2ce5d686868e18f8cb03814d2479f0e2774efb5530cd77f2d3e8c4ed354e8240481d4477536828e5d6af0b50eb43d8c362395dae9b6efa53ff7d5c71208134ebb53f662635c4435365e35059de2fe2c6aff04d13d64b7a8b2fa751922a8c9872b28efba30596ba9004699cb3dcd4896ba2f234a8a434299ab5d94f38a1bfeb6c861fdcdd70bd84de3aa5eafd0d45145028488924eb8963f37593d7b03cf6516781ec062f0933839c13aa332a5a3abed20e6f9e7b066143f36b909c51b98a637866fc8c63f27e4b0a836a6b8bd6bcf8a20920faa431370ca45d096c4efa237a1ce0d2b2cc70cef5d6672d0fd33f8ab6af34e5b720999286593004dfc75a83a0df6f3e79689d83614c02297619315243468250579241ac8d03ef9320c1173c9eb3727c5a9779f768c7acac2fa606d7009d5ec15b98238bc474fb5e8d96ca52a319f99c739272c909daa79a2ac59ede1fff686176c4ce47ef8db249073cb831fdbc94fd55be03fada6fb13910d71ad18fbed5f86da55552236642859ac12f99e1635a22b4e9a886d55e4d4834511c241fb7f66de318550fcd3dcfb141970e8099d8cacdd43feef3afc171dc1f4650d52966b8cf092c43a37bb5b29c793aaa8cd52cfac690cb4cefb837a9a030505cd5f147cc3abb5d372718f083412da4c91a7c905c9e2b6528bd1bdc597648351606f4e70705a3a34a1fc4b83b609f2d8e7efc299a2cea4df796897048acafe9247e9a32b366af8244bf3cfedef1676044f44d26c823a4fec672faa053f71a5e765ac5dfde7b3616fa20d1b68fbcea0d67bd8bff3548f9ce657cbf79bfcb9272b9213c27e3e1cce80a4c228191ab3eec2b305a504292053d2ee78dc4caf283f5d32a48511ebdaac7a2176736c5b5b53258376fc3acc4138d8c3c5affa138da0a531334c5c53668eeb661d8ff995bb95d46ab48b5c16c89f89682434830801d63b7cfdae2458797ac9455e6021abecc847a17dbec5279ac984e77e90178e45ad1f7dc718d03759f3790c04d63264ff7815b7827d475a8b4cea58f1496ef0e696e487776bea8e6f66627077826229f4ced8d7ac6e5a9a1ae2ef09087cf7082930a040787ec1ddef886de4f884765a767cbc5f11793aae222f1bdcc6e35f67e2303ec93a1c10955dcc7156fe6c8f33b7211e9d90949c2a6c16207e963dd1403631e51d78bed697b6622212222b5c4109fe1c17574ff39ffb83a1d1c40575109615873079a3b95533ebbcbe72219fabf30c055a666eebd0ad025c3d663bca9131a82bf044fc51f9b13b9c0d51d51bdc28afd7476f351f50ecd5fd7cf1a5bf40d1c9d8b5692ac443ee18e1d1c47aa917dfec4e4d09246e1329267c9689577bf566fc6f3c6678bbaf2478adcea5809aa0a187b10dc8ad3a9990ed11a137a943315ff6f2fee9ab0b4d3ba8200e905b8301f5e037f975ec74ff1c7037921ecff9d002f04a8f83de136bf2ae447c1a92ec0d6a748cde1873ccaf3685803bdd1704e36ca7dad35236f4f913be709b6f8d7db12a553cc51c987058dbca05bcc396776d0c7ccf09dde0421f7f5bcccaa72b155060d4fe21d2e69ef492dbcace542be74bb46b328f2b5f017769d70370ae612147433110cb3b92ad72ebcc65c4467f6b04f2356483a9d0315e1186e2b55b9ba7c115c5855110d0eea323935da0316bf635c30f0f6adb6f253636090a0ed43f446d5a36dec9915b76c2d0c67d79a8d10e23a22dfe99b3691f3b056251488e7075994b6e00293f01d9730a3478f91fbe388a4ddfc13ab17017ed0a41eaa371121b20511491082fe2d865ea70fb5c58a231a586facb8c99d0975f0afa7e3fffe76b274e7ee5fcafc01ef9cd5d1779405a2748aebea29238d6de71e7a38202c277ec706d82778f9f0da2121780b6bb799d3ec265d85bab9ab4706b3be28a403010f1075689e414f37c57b5a85625907a857f8935bcdaa65ab14dc7abe6ffcb4e18493f6693cfb3106cc970629643566821b3e591435255238bfdd1c84cf2e24f299d579ab99f252c7d349362905d8daf2c483922ac63d9b40afdbe23908da7a80b4659260af3704addae263d122e368b8322cffb10024efd238af0d7f17b6f96e15c0a6ddf0329930987dcdf5d15c20f338d44a05b42ab1f4a93a6629bbabc3d8869eb1004dd906af2915a3435680e469678367dd441f098c5f2a24481d93bb610eb3c7a3b5bdcf22c0064756af8d9f02749d21e0daca5f6a862081c72b0a10354436f3f37466663f74d68a3a360fcc44f394cb3c728d137e8dee34270770f2beeeff98e7bf2c4848a8e93a57b0a1c14ca52a4679c2960ae0337a57590acb81ad471c333e8ed3f82bbf44b1cd704f5de2ecc676da91b0bac1eb1685124924fb5fe488dda425554b4e8ae4f98d5f9e2c260a47265f4aa37583cb6556ad425ba9dfbbd999f7da19d5e36ebfb8ae64aabb990901affd2667da1080b37746f6c18dffec796c6d65e9e1336c2afe165e716d7310a2ce5a83ffa2f379e7e24090aa70a734d2fae2611f950d9b7b8f3424a5bd0e6f7434ca14fc2bc21b023802b9f4f602919fcc4be0c6c8ea97af2c8afc31c69201cbc67cf306be629c668a097e87e541925cdc09f786cbb5739895732a53229fc5f552c2299cf2fe909b6a8fe9bf67d5d0118a7fc5be5da51eb34a783371b9c572315f5b4c8999efa0b6943808c3b577d4261acd4cfd94ae63ad0c6e403051c53090d19ee9dc1f772ca5b4e04b0f854329a2380c72f5700b6d1ada5d814155279a0e639a715e0564115e7b26a5ffa51ccb00bb868469a7a8ada54fdaa31e77e35830508db80cb678b7ee3711302733291a440e9a798adea55be57f7876c36a7b408e99e7a59abc028570a1660d54410c2db9b99d896bdd27dee3f115179340ae46d69706dda0ba04acb3471719da4e032fa093de6ed0dfbe8a5ec7ed6942cd877dd2a814146e35e800137747fe32745fb4af60a0bd0d48bcbe53eabf67990a5afd1d68f816390705f539975b5ca49a7e880cf02814e9888a8ea91abf01d552174eb02da00fb8054eb7ea81c6b511e0789f44fec714ff2530ecc1a58bb9b27915d49e5756ec529fbc69e0902e88a33575cf5916b9291460f904856f6902cc7744db997812bbe410e3f550b83e0197b2456624a15a483a700ba3c9efc1c4a607c525afd0f9dffda91388d16410c12b4a83f99414970d8c75c53957ab0327acf9fee92909c19df1189e0cba98f35a29120d68a35d8281cd8d343fe6fc65b9a592d8a6115a97f24f58c116c046b362914e108a3301936537783c4b76082523b3124bcd71a36e5467b1549be4324ada8c6e45ac02fd1aaed8f1c12c1e610f3a7047ef8d4e8e2773039b7b4d7085f04439258c2b490f06bde28a038e23aaf85794bc33b574b6d2726d5ac6397ddfce2bcb91abc1fb3ff540e9d188b84f7cb8aa1a68ec5cc75786fc755d62ae600a2f2c1d648be95d9f2de92a9abaac6417662680073eda6e5838fd171d74cff71dd408708de8f07c6b5667d82c8f7efa69d400adabd6de6557c7e44292b1be77dc90d82b059b3ee01c32852759c59ac421075a7df042e1ad1d3706c3cd864a44f68ae2303f39f6abcab5e15b7de13ba3a1f85867739269fabde5ed340feab5dd24f8e7e86cac8f2981709d3a9f0b3372f468bb8f20ecfcdce7ca059a49d8e61dc12103b5003238343740d14ed45b6000361cb0ab277c34bc3cb1be55fd33dda317540b257d1dd2555ae0a56eafa4fc4da7c705667538a65f6e70c56a1fa04be1905305db0949a6a498481f8fd164d66c2676e9963d96f49371f4ba6dce170c32ab806684ae86df9d20baceb6bc4191e980591f833e648cfff2592c9d866bbce92257f69c946c37235d41ff3d073e1be62f0f2a10cae513e1a5f146ee9198ac9524ff5259f76d62ca0bf9d233361cc1ab6682ddc2f5fa38594a536beecd205d4c8b97d48b1186e934e021baa919d7510bdd114e9ba347747747681593369f4007d8d14ac3336e8ee33f93031297cd4e9279422f6cb1578faeb4b6c35088ad1c16eebd34f39145299d76dc960379f49522efeb96b82fae1294ee4c5b7e13cee8bf295fc64cc51418a5c03387f291560a4fd43969ec69acd874de0d770534731c8b2a3066190ad01c8acad0fd8627bedbdd3a0648de6b684911c61a976afb5a774abea8a00b15407dd79353b38789358783e09908b2d39f5fbdfe5aea98fd478bff5f3a8c55197671ae0442478943e9296338f87ca4862baab3dd55a75c4c6717e3a6b610882a979215747d0d9d9f976a99d4dd1c2f9bc68e9cc39b27696a0a6c6e85ec0052f81b7f10573e7a3b21de433da09e85109a040cd00730e3856fa43372c69da1fee87420ea9591632ed654a299d4a172610cd11c653e1c64c80a1eb9bf60972e6633ed51fa287dfd7c892031c3b2d123466f1b6ddc45ab09e518066e19095a1aa2c674f6e8b24dd09ce7514fcdc508681b7ba4e3dfe106229e246986e05044a3c5f03ac785020592640d3eb2e3a639ce79a72b24cef5dc772fa6831549e2b0d54ce36b241291fcc2a0fe77c61d0d0a21a30f6cad8e934c14809e5adeb0d039b84cfc8a919ec276ccf88ac7139fca948a64f9bf5ef709f7fbe1888fbc137c3fe571e54f3c38c4ee3eff155e17d67a3ca4d223ef50bc3eb1be6e278fc2a65e25432cbb66a6d393cded33bcb6f9de277fd9448947c6302535cf9ad4f8d74f53c004e257e7bb7850a0a48d6bf590c0b2872dceab86c393d34d3908c7b594f2d6212035ba7414f9b48a76c8947363fe631c71f5c031ce822c6a5b8dfcb965dbdc659493c01e63ce3eff2802dcc9b282ce8d1b0d282ae982d8c79e5a85d68b0882012aaf849002424f074fe24cd32fbe212c2b31874159332fdb7ea677008229a65f115b727b8a1cb050e71347f874373f11fcaed4b15693f459779ff2d0a2c978ededc1721167369177387c5b0a28e752abd5592d4d26712a1479959c66ee94f3bf1e514d72f3dc36080675bb10b1b1f84abab3146b66df570e5c74c394edd4718d17b083ce13331963f3440718e04dd48a8df0993c862b94df4718a567169fe65d72f25c6eacb64e18e33bb1239876ab4caf11a490c0330630cbb0fba89d2df42e90c1a3d57619d5992203fda3a6be02288e87416a809dbfecb09919b38e34b1574a9ac2ac71951c6bcbd914643722e1a93cadecb067574909cd2a53efdd2d0fce0f134b61e04c9d4a7ecd4fbe8e07afb3faf698deb9eefd701886f3937cc7b6fe756a6ef7621fb9f717363333fa324378d32057f1a624f5abbb2f1b9a440d82bd54bdf9cc7759645f37c3e397ad89fb679659be2318b83183b9a4fd871fe31f56167c9bd8a822f5d57b125c567c911dd5f3be42e6fbf29df8fe10b4deb123b8de5869ab318513280406c393d55878ebc63be0cb1cf1006b2c1d5320058f99b27420265007bfd6b12f0bd17e62de02296f0717b011acda0b6b288b5f78ae9083f0e841e62494a2d4da4cabd3a940ac2f540c032d196af73f6f66dcaf7da93a6da645000c886984058dbc995d64d032482506db36541084a917b876d087b965b33df63f4753e6a7c51786f5a03887bf5f64dd279a05f8393f937d64e8f983810620e799a60579a3b96699321f6379ff99b2610be9f12b9797d64c97aac7057368946a4a913c55ca66b91cbe900021b3c8188ecb1035d87442851fc3910115d5a85bca5b8644172dcf1a821d1e6321d99b95990aa68cf4231f0802082bf1da01e73df4300cbc9c25edbf1fcf5d964613eaba32190534eb109c97d9311664ebc8107162c91cb9638daba325ed12f9d77338de0a390ffe81123fb0c375d298fd4f7aa6dea0d15d4b8ac3b34e5be0c6575c8f9981d5e48e0e5ea71b2e3686327e6574f225f8c1d539b974be6ce935c814208211724e091d89afb76753b1e806fa141aaeeb1b13bee3b61234ae5ffd8d1fd79289a77e73792b3dce48bf2eea554cee68aefedec7e5e14a3cfa2a34f9920a2f9b7f07bc657ed4fe7f5f7336301b479c91581ded39c05526a603fc8790e47842d5ff1643b5e58a2d85b7e1fffac16708db65ce543180729214c460a5e51367cd3eb63945a5372b75c610e7e666d0cabec7ec4bb8ded012e69d5a1a350cc9734562c4aa98780ffd29769915b112d0a5bfb66fef86eb7b8182b21a53005adfe726028d7d62d6bfa53ff59865b9446df6a749636b448dc29b26df9815d2d4a25dd3a7d72af62e9f85e6b5f5ff09b70470e2e6103eb389e100c5bca3c50eed8896a155881547bbb2ca9036946aef902d074710aef7d822562a85264ae6b62a8f6e3de0766c342101875d7e8eaf9604f85bcb1ce9cb88003550479e8c76577b9697f9e0b3eb812b5bb3fa01d31d97eb6911ff604434a467fd4da1159f88cd4b50ee8b5c023cb570c420fc84d0408375db5126aab836fc62b0b8d7679720f8cdae8f63280eddf6ff79d990b0436ba816251a95672b7cb0a94e452ee02a0375ff54e52da1ead5d777b3be44f2188d574fcdab08235fdd5d834b4b4ae3e8a204e3dc0eae47b7134058d73dbe69fb5f67f5a09acaa36bf00e2e488b951ff29f76d7093aadb6b00e6894a89964bec8475a4d0c916a93db57546f36f1e62a99d792f463fc6abf3f6b88d541831e7a6c31491e7660656e8ef36dd83c28c22f1a667848be16d8b01b060310238ad17ff1325f64251742c580b2d9be39c1130b52edc1a47b3e1e5abfa2c3dddfaa6e470da7dc9fd35c83af6d9acf32a9e6beb68c3b7eba1e6614ef79c9797ffbf38dc99f38f8f359b68d917c77d39f62ab4ed91a23966ceaabc69d120dfb718601b000f312ce85faa81b558374555587be820d706f121fb54cbfdd8fbb2d7009ed4d696d4359462b4572bb50cb2b59697ef5e21cd6cb5edd84f9d1c8da62411193217b7ab0d0b0a29a7ec5dd3468d9d6c7516ac5d4315d4c6598fd856038b1db4d7e0b11aca8de88343eeddfe22e482b5589def594f81455c02754b5c06c3687c3852b3a9266f05f756f3d4426795b624235eb8a79d22f581d8283f5a33f55d05f647147f197cc8989920191b8ce944859ad8aed14e2d78ebd7b8d3a7844d1700517fb6d17586b26e9b8cf50c62613a0256944ede978c132930adec7f782ef2bc5707420c662b3362aba3702ead08856fab6055b92283f92ad68246170a773b012067067f17a2b629afcac4b4d4ea9929ef9172aacf690823fd77c77385f2bdeb768f353f295ef8d582e67d825b179a4727187c96e220bd5f23150124e281f4</script>
-  <div class="hbe hbe-content">
-    <div class="hbe hbe-input hbe-input-flip">
-      <input class="hbe hbe-input-field hbe-input-field-flip" type="password" id="hbePass">
-      <label class="hbe hbe-input-label hbe-input-label-flip" for="hbePass">
-        <span class="hbe hbe-input-label-content hbe-input-label-content-flip" data-content="您好, 这里需要密码。">您好, 这里需要密码。</span>
-      </label>
-    </div>
-  </div>
-</div>
-<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
+    <title>cpp-菜鸟回炉-操作系统内存对齐</title>
+    <url>/article/734109955.html</url>
+    <content><![CDATA[<p> 最为一名程序员，你知道一个基础变量在计算机是怎样存储的吗？你知道一个整数占多大的空间？一个结构体占多大的空间？一个联合体占多个的空间？</p>
+<h3 id="对齐"><a href="#对齐" class="headerlink" title="对齐"></a>对齐</h3><p>​    很多计算机系统对基础数据类型的可允许地址做了一个限制，要求某种类型的对象的地址必须是某个值k（通常是2，4，8）的倍数。这种对齐限制简化了处理器和存储器系统之间接口的硬件设计。假如，一个处理器总是从存储器中取8个字节的数据出来，则地址必须为8的倍数。如果我们能保证所有的double都将他们的地址对齐为8的倍数，那么就可以用一个存储器操作来读或者写值了。否则我们可能要执行两次存储器访问，因为对象可能分布在两个8字节存储器中。</p>
+<p>​    确保每种数据类型都是按照指定方式来组织和分配的，即每种类型的对象都满足它的对齐限制，就可以保证实施对齐。<code>编译器</code>在汇编代码中放入命令，指明全局数据所需要的对齐。当然我们自己在代码中也可以控制，这个后面在说。</p>
+<h3 id="对齐规则"><a href="#对齐规则" class="headerlink" title="对齐规则"></a>对齐规则</h3><p>​    每个特定平台上的编译器都有自己默认的“对齐系数”。可以通过预编译命令<code>#pragma pack(n)</code>, n = 1,2,4,8来改变这一系数。若没有手动指定，那么编译器就会默认将成员变量中最大的类型字节数设置为对齐值：m</p>
+<h4 id="有效对齐值"><a href="#有效对齐值" class="headerlink" title="有效对齐值"></a>有效对齐值</h4><p>​    有效对其值：是给定值<code>#pragma pack(n)</code>和结构体中最长数据类型长度中<code>较小</code>的那个。有效对齐值也叫<strong>对齐单位</strong>。</p>
+<p>了解了上面的概念后，我们现在可以来看看内存对齐需要遵循的规则：</p>
+<p>(1) 结构体第一个成员的<strong>偏移量（offset）</strong>为0，以后每个成员相对于结构体首地址的 offset 都是<strong>该成员大小与有效对齐值中较小那个</strong>(即·<code>对齐单位</code>)的整数倍，如有需要编译器会在成员之间加上填充字节。</p>
+<p>(2) <strong>结构体的总大小</strong>为 有效对齐值 的<strong>整数倍</strong>，如有需要编译器会在最末一个成员之后加上填充字节。</p>
+<h4 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h4><p>考虑下面的结构体，使用系统默认的设置，分析其内存分布</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="comment">//ubuntu 64位，sizeof(int) 4字节</span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">S1</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="keyword">int</span> i;</span><br><span class="line">    <span class="keyword">char</span> c;</span><br><span class="line">    <span class="keyword">int</span> j;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>假设编译器用的是最小的9字节分配，画出来的图是这样的<img src="/images/memory/offset1.png" alt="offset1.png"></p>
+<p>它是不可能满足域i（偏移量是0）和j（偏移量是5）的4字节对齐要求的。所有编译器在域c和域j之间插入了一个3字节的空隙（此处用xxx表示）。<img src="/images/memory/offset2.png" alt="offset2.png"></p>
+<p>另外编译器可能需要添加一些填充到结构体的末尾，这样结构数组的每个元素都会满足它的对齐要求。</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="comment">//ubuntu 64位，sizeof(int) 4字节</span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">S1</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="keyword">int</span> i;</span><br><span class="line">    <span class="keyword">int</span> j;</span><br><span class="line">    <span class="keyword">char</span> c;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p><img src="/images/memory/offset3.png" alt="offset3.png"></p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="comment">//ubuntu64位，sizeof(int) 4字节，sizeof(double) 8字节</span></span><br><span class="line"><span class="class"><span class="keyword">union</span> <span class="title">A</span>&#123;</span></span><br><span class="line">    <span class="keyword">char</span> c;</span><br><span class="line">    <span class="keyword">int</span> a[<span class="number">5</span>];</span><br><span class="line">    <span class="keyword">double</span> d;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">sizeof</span>(A) = <span class="number">24</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">B</span>&#123;</span></span><br><span class="line">    <span class="keyword">char</span> c;</span><br><span class="line">    <span class="keyword">int</span> a[<span class="number">5</span>];</span><br><span class="line">    <span class="keyword">double</span> d;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">sizeof</span>(B) = <span class="number">32</span></span><br></pre></td></tr></table></figure>
+]]></content>
       <categories>
         <category>Cpp</category>
+        <category>memory</category>
       </categories>
-  </entry>
-  <entry>
-    <title>cpp-菜鸟回炉-内存分布之抽象类</title>
-    <url>/article/3626025482.html</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
-    <title>cpp-菜鸟回炉-内存对齐</title>
-    <url>/article/1347892621.html</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
-    <title>cpp-菜鸟回炉-内存分布之普通类</title>
-    <url>/article/202723234.html</url>
-    <content><![CDATA[]]></content>
+      <tags>
+        <tag>memory</tag>
+      </tags>
   </entry>
   <entry>
     <title>cpp-菜鸟回炉-操作系统内存管理</title>
     <url>/article/279221372.html</url>
-    <content><![CDATA[]]></content>
+    <content><![CDATA[<p>   本文介绍操作系统对变量的内存管理相关的内容。要能够更清楚的看懂本章的内容，需要先看一下我上一章程序编译原理中提到的操作系统的抽象相关内容。</p>
+<h3 id="信息存储"><a href="#信息存储" class="headerlink" title="信息存储"></a>信息存储</h3><p>​    大多数的计算机使用8位的块，或称为<code>字节</code>（byte），来作为最小的可寻址的存储器单位，而不是访问存储器中单独的位。机器级程序将存储器视为一个非常大的字节数组，成为<code>虚拟存储器</code>。存储器的每个字节都由一个唯一的数字来标识，称为它的<code>地址</code>，所有可能地址的集合就称为<code>虚拟地址空间</code>。正如它的名字表明的，这个虚拟地址空间只是展现给机器级程序的概念性映像。实际的实现是随机访问存储器RAM，磁盘存储，特殊硬件和操作系统软件的结合，来为程序提供一个看上去统一的字节数组。</p>
+<h4 id="十六进制表示法"><a href="#十六进制表示法" class="headerlink" title="十六进制表示法"></a>十六进制表示法</h4><p>​    <img src="/images/memory/hex.png" alt="hex.png"></p>
+<h4 id="字"><a href="#字" class="headerlink" title="字"></a>字</h4><p>​    每台计算机都有一个字长，指明<code>整数</code>和<code>指针数据</code>的标称大小。因为虚拟地址就是以这样的字来编码的，所以字长决定的最重要的参数是虚拟地址空间的最大大小。也就是说，对于一个字长为n位的机器而言，虚拟地址的范围为0~2^n-1,程序最大访问2^n字节。</p>
+<p>​    今天大多数的计算机的字长为64位，这就限制了虚拟地址空间为8千兆（8GB）。</p>
+<h4 id="数据大小"><a href="#数据大小" class="headerlink" title="数据大小"></a>数据大小</h4><p>​    <code>计算机</code>和<code>编译器</code>使用不同的方式来编码数字，比如不同长度的整数和浮点数，从而支持多种数字格式。准确的字节数依赖于机器和编译器。我们展示典型的32位机器和64位机器中的基础类型的字节长度。<img src="/images/memory/byte.png" alt="byte.png"></p>
+<h4 id="寻址和字节顺序"><a href="#寻址和字节顺序" class="headerlink" title="寻址和字节顺序"></a>寻址和字节顺序</h4><p>​    对于跨越多字节的程序对象，我们必须建立两个规则：</p>
+<ul>
+<li>这个对象的地址是什么；</li>
+<li>我们在存储器中如何对这些字节排序；字节排序有两种形式，分为<code>大端法</code>和<code>小端法</code>：<ul>
+<li><strong>小端法</strong>：某些机器选择在存储器中按照从最低有效字节到最高有效字节的顺序存储对象，最低有效字节在最前面的方式被称为小端法，即数据的高字节保存在内存的高地址中，数据的低字节保存在内存的低地址中；<ul>
+<li>大多数源自以前的Digital Equipment公司（现在是Compaq公司的一部分）的机器及其Intel的机器都采用这种规则。</li>
+</ul>
+</li>
+<li><strong>大端法</strong>：另外一些机器选择在存储器中按照从最高有效字节到最低有效字节的顺序存储对象，最高有效字节在最前面的方式被称为大端法，即数据的高字节保存在内存的低地址中，数据的低字节保存在内存的高地址中；这个与我们的阅读习惯一致。<ul>
+<li>IBM，Motorola,Sun Microsytems的大多数机器都采用这种规则。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>​        在几乎所有的机器中，多字节对象都被存储为连续的字节序列，对象的地址为所使用字节序列中最小的地址。例如，假设一个类型为int的变量x的地址为0x100，也就是说，地址表达式&amp;x的值为0x100。那么x的四个字节将被存储在存储器的0x100,0x101,0x102,0x103位置。</p>
+<p>​        对于大多数的程序员来说，他们机器字节的顺序是完成不可见的。无论为哪种类型的机器所编译的程序都可以得到相同的结果。不过有时间，字节顺序会成为问题。</p>
+<ul>
+<li><p>不同机器之间通过网络传递二进制数据时，当小端法机器产生的数据被发送到大端法的机器上或者反之时，接受程序会发现字里的字节成了反序的。为了避免这种问题，网络应用程序的代码编写必须遵守已经建立的关于字节顺序的规则，以确保发送方机器将其内部表示转换成网络标准，而接收方机器则将网络标准转换成其内部的表示。</p>
+</li>
+<li><p>判断机器是大端还是小端的方法；</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span>* argv[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="class"><span class="keyword">union</span> &#123;</span></span><br><span class="line">        <span class="keyword">int</span> a;</span><br><span class="line">        <span class="keyword">char</span> c;</span><br><span class="line">    &#125;Un;<span class="comment">//联合体共用内存</span></span><br><span class="line">    <span class="comment">//假设当前的内存地址为           00 01 02 03</span></span><br><span class="line">    <span class="comment">//int a 4个字节，大端法的内存分布 12 34 56 78;</span></span><br><span class="line">    <span class="comment">//int a 4个字节，小端法的内存分布 78 56 34 12;</span></span><br><span class="line">    Un.a = <span class="number">0x12345678</span>;<span class="comment">//12是数据的高字节哦                                                                                                  </span></span><br><span class="line">    <span class="keyword">if</span> (Un.c == <span class="number">0x12</span>)</span><br><span class="line">        <span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;big&quot;</span> &lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span>(Un.c == <span class="number">0x78</span>)</span><br><span class="line">        <span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;little&quot;</span> &lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="整数数据类型的存储"><a href="#整数数据类型的存储" class="headerlink" title="整数数据类型的存储"></a>整数数据类型的存储</h3><p>​    计算机编码整数有两种方式：</p>
+<ul>
+<li>一种只能表示非负数；<ul>
+<li>对于这种整数，计算机的存储直接将其转换为对应的二进制，然后直接存储。</li>
+</ul>
+</li>
+<li>另一种可以表示负数，零，正数；<ul>
+<li>对于这种整数，计算机通过<code>二进制补码</code>的方式来进行存储，它的定义是将<code>最高有效位</code>解释为<code>负权</code>，也成为<code>符号位</code>。当被设置为<code>1</code>时，表示值为<code>负数</code>；当被设置为<code>0</code>时，值为<code>非负</code>。</li>
+<li>原码：就是符号加绝对值</li>
+<li>反码：正数的反码就是原码，负数的反码是保持符号位不变，其他位取反；</li>
+<li>补码：正数的补码就是原码，负数的补码为反码+1；</li>
+</ul>
+</li>
+</ul>
+<p><img src="/images/memory/int.png" alt="int.png"></p>
+<h3 id="浮点数数据类型的存储"><a href="#浮点数数据类型的存储" class="headerlink" title="浮点数数据类型的存储"></a>浮点数数据类型的存储</h3><p>​    计算机中的浮点数的存储是按照IEEE（电气电子工程师学会）标准来的 <img src="/images/memory/ieee.png" alt="ieee.png"></p>
+<p>​    示例可以<a href="https://blog.csdn.net/xxssyyyyssxx/article/details/51586959">参考文章</a></p>
+<h3 id="数组分配和访问"><a href="#数组分配和访问" class="headerlink" title="数组分配和访问"></a>数组分配和访问</h3><p><img src="/images/memory/array.png" alt="array.png"></p>
+<h3 id="指针计算"><a href="#指针计算" class="headerlink" title="指针计算"></a>指针计算</h3><p><img src="/images/memory/ptr.png" alt="ptr.png"></p>
+<h3 id="虚拟存储器"><a href="#虚拟存储器" class="headerlink" title="虚拟存储器"></a>虚拟存储器</h3><p>​    为了更有效的管理存储器并且少出错，现代操作系统提供了一个对主存的抽象概念，叫做虚拟存储器。虚拟存储器是硬件异常，硬件地址翻译，主存，磁盘文件和内核软件的完美交互，它为进程提供了一个大的，一致的，私有地址空间。通过一个很清晰的机制，虚拟存储器提供了三个重要的能力：</p>
+<ul>
+<li>它将主存看成是一个存储在磁盘上的地址空间的高速缓存，在主存中只保存活动区域，并根据需要在磁盘和主存之间来回传送数据，通过这种方式，它高效的使用了主存；</li>
+<li>它为每个进程提供了一致的地址空间，从而简化了存储器管理；</li>
+<li>它保护了每个进程的地址空间不被其他进程破环。</li>
+</ul>
+<p>虚拟存储器是计算机系统最重要的概念之一。它成功的一个主要的原因就是因为它是沉默地，自动的工作，不需要应用程序员的任何干涉。既然虚拟存储器在幕后工作的如此之好，为什么程序员还需要理解它呢？有以下几个原因：</p>
+<ul>
+<li><strong>虚拟存储器是中心的</strong>。虚拟存储器遍及计算机系统的所有层面，在硬件异常，汇编器，链接器，加载器，共享对象，文件和进程的设计中扮演着重要的角色。理解虚拟存储器将帮助你更好的理解系统通常是如何工作的。</li>
+<li><strong>虚拟存储器是强大的</strong>。虚拟存储器给予应用程序强大的能力，可以创建和破坏存储器块，将存储器块映射到磁盘文件的某个部分，以及与其他进程共享存储器。比如，你知道你可以通过读写存储器位置读或者修改一个磁盘文件的内容吗？或者你可以加载一个文件的内容到存储器中，不需要进行任何的显示的拷贝吗？理解虚拟存储器将帮助你利用它的强大的能力在你的应用程序中添加动力。</li>
+<li><strong>虚拟存储器是危险的</strong>。每个应用程序引用一个变量，间接引用一个指针，或者调用一个诸如malloc这样动态分配包程序时，它就会和虚拟存储器进行交互。如果虚拟存储器使用不当，应用将遇到复杂险恶的与存储器有关的错误。例如一个带有错误指针的程序可以立即崩溃于”<strong>段错误</strong>“或者”<strong>保护错误</strong>“。</li>
+</ul>
+<p>独立的地址空间允许每个进程为它的存储器映像使用相同的基本格式，而不管代码和数据实际存放在物理存储器的何处。例如每个Linux进程使用如图所示的格式。文本区总是从虚拟地址<strong>0x08048000</strong>处开始的，栈总是从地址<strong>0xbfffffff</strong>向下伸展，共享代码库总是从地址<strong>0x40000000</strong>，而操作系统代码和数据总是从地址<strong>0xc0000000</strong>开始。这样一致性极大的简化了链接器的设计和实现，允许链接器生成全链接的可执行目标文件，这些可执行文件是独立于物理存储器中代码和数据的最终位置。<img src="/images/memory/linuxmemory1.png" alt="linuxmemory1.png"></p>
+<h3 id="程序中代码和数据的存储位置"><a href="#程序中代码和数据的存储位置" class="headerlink" title="程序中代码和数据的存储位置"></a>程序中代码和数据的存储位置</h3><p>​    在计算机中每个程序的内存是相互独立的，都是在虚拟存储器中开辟的空间。虚拟地址空间（查看我上一篇文章程序编译原理）有大量准确定义的区，每个区都有专门的功能：<img src="/images/memory/linuxmemory.png" alt="linuxmemory.png"></p>
+<ul>
+<li><code>栈</code>：位于虚拟地址空间顶部的是用户栈，系统自己分配，存放临时变量包括，局部变量，返回值，参数，返回地址等；</li>
+<li><code>堆</code>:  主要用于动态内存的分配，在程序开发中，一般是开发人员进行分配与释放，</li>
+<li><code>读/写区域</code>：主要存放全局变量，静态变量;<ul>
+<li><code>data</code>：data区里主要存放的是已经初始化的全局变量、静态变量；</li>
+<li><code>bss</code>：bss区主要存放的是未初始化的全局变量、静态变量，这些未初始化的数据在程序执行前会自动被系统初始化为0或者NULL；</li>
+</ul>
+</li>
+<li><code>只读区</code>：主要存放const修饰的变量/字符常量，二进制代码。<ul>
+<li>init：</li>
+<li>text：已经编译的程序的代码；</li>
+<li>rodata：只读数据，比如printf语句中的格式串和switch语句的跳转表；</li>
+</ul>
+</li>
+</ul>
+<h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><p>​    全文皆是摘录自<a href="https://gitee.com/helioswei/books">《深入理解计算机系统》</a>一书，用于自己的学习和理解，若存在侵权请联系作者。</p>
+]]></content>
+      <categories>
+        <category>Cpp</category>
+        <category>memory</category>
+      </categories>
+      <tags>
+        <tag>memory</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>cpp-菜鸟回炉-程序编译原理</title>
+    <url>/article/1580317473.html</url>
+    <content><![CDATA[<p>​    菜鸟的自我学习之路。</p>
+<p>​    本文介绍程序的编译原理以及运行过程中发生了什么。</p>
+<h3 id="程序编译过程"><a href="#程序编译过程" class="headerlink" title="程序编译过程"></a>程序编译过程</h3><p>​    我们的源程序实际上就是一个由0和1组成的位（又成为比特）序列，这些位被组织成8个一组，称为字节，每个字节都表示程序中某个文本字符。大部分的操作系统都使用ASCII标准来表示文本字符，这种方式实际上就是用一个唯一的字节大小的整数值来表示每个字符。</p>
+<p>​    为了能够在系统上运行我们的代码，每条ｃ语言都必须被其他程序转换为一系列的<strong>低级机器语言指令</strong>。然后这些指令按照一种称为<strong>可执行目标程序</strong>的格式打包好，并以<strong>二进制磁盘文件</strong>的形式存放起来。目标程序也称为可执行目标文件。在Unix系统上，从源文件到目标文件的转换是由编译器驱动程序完成的，如ｇcc。对于一个简单的程序，如hello.c，</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span>* argv[])</span>                                                                                                          </span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>,<span class="number">1111</span>);</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">gcc -o hello hello.c</span><br></pre></td></tr></table></figure>
+<p>​    在这里gcc编译驱动程序读取源程序hello.c，并将其翻译成一个可执行目标文件hello。这个编译过程是分四个基本完成的。如图，执行这四个阶段的程序（预处理器，编译器，汇编器，链接器）一起构成了编译系统。<img src="/images/memory/gcc.png" alt="gcc.png"></p>
+<ul>
+<li><p>预处理阶段：预处理器（cpp）根据以字符#开头的命令，修改原始的c程序。比如hello.c中的第一行的#include&lt;stdio.h&gt;指令告诉预处理器读取系统头文件stdio.h的内容，并把其直接插入到程序文本中去。结果得到另一个c程序，通常是以<code>.i</code>作为文件扩展名。</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">gcc -E hello.c  -o hello.i</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>编译阶段：编译器（ccl）将文本文件<code>hello.i</code>翻译成文本文件<code>hello.s</code>,它包含一个<code>汇编语言程序</code>。汇编语言程序中的每条语句都以一种标准的文本格式确切描述了一条低级机器语言指令。汇编程序是非常有用的，因为它为不同高级语言程序中的不同编译器提供了通用的输出语句。</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">gcc -S hello.i  -o hello.s</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>汇编阶段：接下来汇编器（as）将<code>hello.s</code>翻译成<code>机器语言指令</code>，把这些指令打包成一种叫做<code>可重定位目标程序格式</code>。并将结果保存在目标文件<code>hello.o</code>中。hello.o文件是一个二进制的文件，它的字节编码是机器语言指令而不是字符，如果我们在文本编译器中打开hello.o文件，呈现的将是一堆乱码。</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">gcc -c hello.s  -o hello.o</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>链接阶段：请注意，我们的hello程序调用了printf函数，它是标准c库中的一个函数，每个c编译器都提供。printf函数存在于一个叫printf.o的单独的预编译目标文件中，而这个文件必须以某种方式并入到我们的hello.o程序中。链接器(ld)就是负责这种并入，结果得到一个hello文件，它是一个<code>可执行目标文件</code>(或称可执行文件)。可执行程序加载到存储器后，由系统负责执行。</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">gcc hello.o -o hello</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p><code>cpp的编译过程同理，只是我们的编译成换成了g++,上面分步编译的命令同样适用</code></p>
+<h3 id="理解编译系统如何工作的好处"><a href="#理解编译系统如何工作的好处" class="headerlink" title="理解编译系统如何工作的好处"></a>理解编译系统如何工作的好处</h3><h4 id="优化程序性能"><a href="#优化程序性能" class="headerlink" title="优化程序性能"></a>优化程序性能</h4><p>​    现代编译器都是成熟的工具，通常可以生成很好的代码。作为程序员，我们无需为了写出高效的代码而去了解编译器内部的工作。但是为了在我们的程序里面做出好的代码选择，我们确实需要对汇编语言以及编译器如何将不同的c语句转换为汇编语言有一些基础的了解。比如：一个switch语句是不是总是比一系列的if-else语句高效呢？一个函数的代价有多少？while循环比do循环更有效吗？指针引用比数组引用更有效吗?</p>
+<h4 id="理解链接时出现的错误"><a href="#理解链接时出现的错误" class="headerlink" title="理解链接时出现的错误"></a>理解链接时出现的错误</h4><p>​    根据我们的经验，一些令人困扰的程序错误往往都与链接器操作有关，尤其是当你试图建立大型的软件系统时。比如，链接器报告说它无法解析一个引用，这是什么意思？静态变量和全局变量的区别是什么？静态库和动态库的区别是什么？</p>
+<h4 id="避免安全漏洞"><a href="#避免安全漏洞" class="headerlink" title="避免安全漏洞"></a>避免安全漏洞</h4><p>​    近年来，缓冲区的溢出错误造成了大多数的网络和Internet服务器上的安全漏洞。这些错误的存在是因为大多数的程序员忽视了编译器用来为函数产生代码的堆栈规则。</p>
+<h3 id="程序运行时发生了什么"><a href="#程序运行时发生了什么" class="headerlink" title="程序运行时发生了什么"></a>程序运行时发生了什么</h3><p>​    为了了解运行时hello程序发生了什么，我们需要理解一个典型系统的硬件组织，下图是Inter Pentium系统产品族的模型，<img src="/images/memory/system.png" alt="system.png"></p>
+<p><code>CPU:中央处理器；ALU：算术/逻辑单元；PC：程序计数器；USB：通用串行总线</code></p>
+<h4 id="总线"><a href="#总线" class="headerlink" title="总线"></a>总线</h4><p>​    贯穿整个系统的是一组电子管道，成为总线，它携带信息字节并负责在各个部件之间传递。通常总线被设计成传送定长的字节快，也就是字(word)。字中的字节数（即字长）是一个基本的系统参数，各个系统中也不尽相同。比如，Inter Pentiu系统的字长是4个字节，而服务器类的系统，比如Inter Itaninums和高端的Sun公司的SPARCS的字长是8个字节.用于汽车和工业中的嵌入式控制器之类较小的系统的字长往往只有一或两个字节.</p>
+<h4 id="IO设备"><a href="#IO设备" class="headerlink" title="IO设备"></a>IO设备</h4><p>​    IO设备是系统与外界的联系通道.我们的示例系统包含了四个io设备:作为用户输入的键盘和鼠标,作为用户输出的显示器,以及用于长期存储数据和程序的磁盘驱动器(简单的说就是磁盘).</p>
+<p>​    每个IO设备都是通过一个控制器和适配器与IO总线进行连接的.控制器和适配器之间的区别主要在于它们的组成方式.控制器是IO设备本身中或者系统的主印制电路板(通常称为主板)上的芯片组,而适配器则是一块插在主板插槽上的卡.无论无何,它们的功能都是在IO总线和IO设备之间传递信息.</p>
+<h4 id="主存"><a href="#主存" class="headerlink" title="主存"></a>主存</h4><p>​    主存是一个临时存储设备,在处理器执行程序时,它被用来存放程序和程序处理的数据.物理上来说，主存是由一组DRAM（动态随机存储器）芯片组成的。逻辑上来说，存储器是由一个<strong>线性的字节数组</strong>组成的，每个字节都有字节唯一的地址（数组索引），这些地址是从0开始的。一般来说，组成程序的每条机器指令都由不定量的字节构成。与C程序变量相对应的数据项的大小是根据类型变化的。比如，运行LInux的Inter机器上，short类型的数据需要2个字节，int,float和long类型需要4个字节，而double类型需要8个字节。</p>
+<h4 id="处理器"><a href="#处理器" class="headerlink" title="处理器"></a>处理器</h4><p>​    中央处理单元（CPU）简称处理器，只解释（或执行）存储在主存中指令的引擎。处理器的核心是一个被称为<code>程序计数器</code>（PC）的字长大小的存储设备（或寄存器。在任何时间点上，PC都指向主存中的某条<code>机器语言指令</code>（内含其地址）。</p>
+<p>​    从系统通电开始，直到系统断电，处理器一直在不假思索的重复执行相同的基本任务：从程序计数器指向的存储器处读取指令，解释指令中的位，执行指令指示的简单操作，然后更新程序计数器指向下一条指令，而这条指令并不一定在存储器中和刚刚执行的指令相邻。</p>
+<p>​    这样简单操作的数目并不多，它们在主存，寄存器文件和<code>算法逻辑单元</code>（ALU）之间循环。寄存器文件是一个小的存储设备，由一些字长大小的寄存器组成，这些寄存器每个都有唯一的名字。ALU计算新的数据和地址值。</p>
+<h4 id="程序运行"><a href="#程序运行" class="headerlink" title="程序运行"></a>程序运行</h4><p>​    我们做一个粗略的描述：</p>
+<p>​    首先，shell程序执行它的指令，等待我们输入命令。当我们在键盘输入字符串./hello后，shell程序就逐一读取字符到寄存器，再把它存储到存储器中，如下图。<img src="/images/memory/hello1.png" alt="hello1.png"></p>
+<p>​    当我们在键盘上敲回车键时，shell就知道我们已经结束了命令的输入。然后shell执行一系列的指令将hello目标文件中的代码和数据从磁盘拷贝到主存中，从而加载hello文件。</p>
+<p>​    利用称为DMA（直接存储器存取）的技术，数据可以不通过处理器而直接从磁盘到达主存，如图<img src="/images/memory/hello2.png" alt="hello2.png"></p>
+<p>​    一旦hello目标文件中的代码和数据被加载到了存储器，处理器就开始执行hello程序的主程序中的机器指令。这些指令将<code>hello world</code>串中的字节从存储器拷贝到寄存器文件，再从寄存器中文件拷贝到显示设备，最终显示到设备上，如图<img src="/images/memory/hello3.png" alt="hello3.png"></p>
+<p>​    通过这个简单的示例我们了解到了重要的一课，那就是系统花费了大量的时间把信息从一个地方挪到另一个地方。hello程序的机器指令最初存放在磁盘上，当程序加载的时候，它们被拷贝到主存。当处理器运行程序时，指令由从存储器拷贝到处理器。从一个程序员的角度来看，大量的拷贝减慢了程序实践的工作。因此，一个系统设计者的一个主要的目标就是使这些拷贝操作尽可能的快。下图是存储器层次模型的示例。<img src="/images/memory/memory.png" alt="memory.png"></p>
+<h4 id="操作系统管理硬件"><a href="#操作系统管理硬件" class="headerlink" title="操作系统管理硬件"></a>操作系统管理硬件</h4><p>​    当shell加载和运行hello程序时,当hello程序输出自己的消息时,程序没有直接的访问键盘,显示器,磁盘或者主存储器.取而代之的是它们依靠操作系统提供的服务。我们可以把操作系统看成是应用程序和硬件之间插入的一层软件如下图，所有的应用程序对硬件的操作都必须通过操作系统。<img src="/images/memory/system2.png" alt="system2.png"></p>
+<p>​    操作系统的两个基本的功能：</p>
+<ul>
+<li>防止硬件被失控的应用程序滥用；</li>
+<li>在控制复杂而又通常广泛不同的低级硬件设备方面，为应用程序提供简单一致的方法；</li>
+</ul>
+<p>操作系统通过下面图片显示的几个基本的抽象概念（进程，虚拟存储器，文件）来实现上述的两个功能。</p>
+<ul>
+<li>文件：对IO设备的抽象表示；<ul>
+<li>文件只不过就是字节序列。每个IO设备，包括磁盘，键盘，显示器，甚至是网络，都可以被看成是文件。系统中的所有输入和输出都是通过使用称为Unix IO的一小组系统函数调用读写文件来实现的</li>
+</ul>
+</li>
+<li>虚拟存储器：对主存和磁盘IO设备的抽象表示；<ul>
+<li>它为每个进程提供一个假象，好像每个进程都在独占地使用主存。每个进程看到的存储器都是一致的，称为虚拟地址空间，如下图是Linux进程的虚拟地址空间（其他的Unix系统的设计与此类似）。在Linux中，最上面的四分之一的地址空间是预留给操作系统中的代码和数据的，这对所有的进程都一样。底部的四分之三的地址空间用来存放用户进程定义的代码和数据。请注意图中的地址是从下往上增大的<img src="/images/memory/virtualmemory.png" alt="virtualmemory.png">每个进程进程看到的虚拟地址空间由大量准确定义的区（area)构成，每个区都有专门的功能。<ul>
+<li>程序代码和数据：代码是从同一固定地址开始的，紧接着的是和C全局变量相对应的数据区。代码和数据区是由可执行目标文件直接初始化的；</li>
+<li>堆：代码和数据区后紧随的就是运行时堆。代码和数据区是进程一旦开始运行时就被指定了大小，与次不同，作为调用了向malloc和free这边的c标准库函数的结果，堆可以在运行时动态的扩展和收缩；</li>
+<li>共享库：在地址空间的中间附近是一块用来存放像C标准库和数学库这样共享库的代码和数据的区域；</li>
+<li>栈：位于用户虚拟地址空间顶部的是用户栈，编译器用它来实现函数的调用。和堆一样，用户栈在程序执行期间可以动态的扩展和收缩。特别的，每次我们调用一个函数时，栈就会增长。每次我们从函数返回时，栈就会收缩；</li>
+<li>内核虚拟存储器。内核是操作系统总是驻留在存储器中的部分。地址空间顶部的四分之一的部分是为内核预留的。应用程序不允许读写这块区域的内容或者直接调用内核代码定义的函数。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>进程：对处理器，主存，和IO设备的抽象表示；</li>
+</ul>
+<p><img src="/images/memory/system3.png" alt="system3.png"></p>
+<h4 id="Unix和Posix"><a href="#Unix和Posix" class="headerlink" title="Unix和Posix"></a>Unix和Posix</h4><p><img src="/images/memory/posix.png" alt="posix.png"></p>
+<h4 id="Linux项目"><a href="#Linux项目" class="headerlink" title="Linux项目"></a>Linux项目</h4><p>​    1991年8月，一个名为Linux Torvalds的芬兰研究生谨慎的发布了一个新的类Unix的操作系统内核。<img src="/images/memory/linux.png" alt="linux.png"></p>
+<h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><p>​    全文皆是摘录自<a href="https://gitee.com/helioswei/books">《深入理解计算机系统》</a>一书，用于自己的学习和理解，若存在侵权请联系作者。</p>
+]]></content>
+      <categories>
+        <category>Cpp</category>
+        <category>memory</category>
+      </categories>
+      <tags>
+        <tag>memory</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>cpp-菜鸟回炉-程序链接详解</title>
+    <url>/article/1117780254.html</url>
+    <content><![CDATA[<h3 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h3><p>链接就是将不同代码和数据收集和组合成为一个单一文件的过程，这个文件可被加载（或被拷贝）到存储器并执行。</p>
+<p>链接发生的时机有以下几种：</p>
+<ul>
+<li>链接可以发生于编译时，也就是在源代码被翻译成机器代码时；</li>
+<li>也可以发生与加载时，也就是在程序被加载器加载到存储器并执行时；</li>
+<li>甚至执行与运行时，由应用程序来执行；</li>
+</ul>
+<p>链接通常是由链接器来安静的处理，对于那些在编程入门课堂上构造小程序的学生来说，链接不是一个重要的议题。那为什么还有这么麻烦的学习关于链接的知识呢？</p>
+<p>​    链接器的两个主要的任务：</p>
+<ul>
+<li>符号解析（symbol resolution）：目标文件定义和引用符号。符号解析的作用是将每个符号引用和一个符号定义联系起来；</li>
+<li>重定位（relocation）：编译器和汇编器生成从零开始的代码和数据节。链接器通过把每个符号定义与一个存储器位置联系起来，然后修改所有这些对符号的引用，使得他们指向这个存储器的位置，从而重定位这些节。</li>
+</ul>
+<p>在你阅读的时候，要记住关于链接器的一些基本的事实：目标文件存粹是字节快的集合。这些快中，有些包含程序代码，有效包含程序数据，而其他的则包含指导链接器和加载器的数据结构。链接器将这些库链接起来，确定被链接块的运行时位置，并且修改代码和数据块中的各个位置。链接器对目标机器了解甚少，产生目标文件的编译器和汇编器已经完成了大部分工作。</p>
+<h3 id="了解链接的好处"><a href="#了解链接的好处" class="headerlink" title="了解链接的好处"></a>了解链接的好处</h3><ul>
+<li>理解链接器将帮助你构造大型程序。构造大型程序的程序员经常会遇到由于缺少模块，缺少库或者不兼容的库版本引起的链接器错误。除非你理解链接器是如何的解析引用，什么是库以及链接器是如何的使用库来解析引用的，否则这些错误将会使用迷惑和挫败；</li>
+<li>理解链接器将帮助你避免一些危险的编程错误。Unix链接器解析符号引用时所做的决定可以不动声色的影响你程序的正确性。在默认情况下，错误的定义多个全局变量的程序将通过链接器，而不产生任何警告信息。由此得到的程序会产生迷惑的运行时行为，而且非常难以调试。</li>
+<li>理解链接将帮助你理解语言的作用域规则是如何实现的。例如全局和局部变量的区别是什么？当你定义一个具有静态属性的变量或者函数时，到底实际意味着什么？</li>
+<li>理解链接器将帮助你理解其他重要的系统概念。</li>
+<li>理解链接器将使你能够开发共享库。随着共享库和动态链接在现代操作系统中日益加强的重要性，链接成为了一个复杂的过程，它为知识丰富的程序员提供了强大的能力。比如，许多软件产品使用共享库在运行时来升级压缩包装的二进制程序。</li>
+</ul>
+<h3 id="目标文件"><a href="#目标文件" class="headerlink" title="目标文件"></a>目标文件</h3><p>​    目标文件有三种形式：</p>
+<ul>
+<li>可重定位目标文件：包含二进制代码和数据，其形式可以在编译时与其他可重定位目标文件合并起来，创建一个可执行目标文件；</li>
+<li>可执行目标文件：包含二进制代码和数据，其形式可以直接被拷贝到存储器并执行；</li>
+<li>共享目标文件：一种特殊类型的可重定位目标文件，可以在加载或者运行时，被动态的加载到存储器并链接。</li>
+</ul>
+<p>编译器和汇编器生成可重定位目标文件（包含共享目标文件），链接器生成可执行目标文件。</p>
+<h3 id="加载可执行目标文件"><a href="#加载可执行目标文件" class="headerlink" title="加载可执行目标文件"></a>加载可执行目标文件</h3><p>​    每个Unix程序都有一个运行时存储器映像。如图<img src="/images/memory/linuxmemory.png" alt="linuxmemory.png"></p>
+<h3 id="从应用程序中加载和链接共享库"><a href="#从应用程序中加载和链接共享库" class="headerlink" title="从应用程序中加载和链接共享库"></a>从应用程序中加载和链接共享库</h3><p>​    应用程序还可能在它运行时要求动态链接器加载和链接任意共享库，而无需在编译时链接那些库到应用中。动态链接是一项强大有用的技术。向linux这样的Unix系统，为动态链接器提供了一个简单的接口，允许应用程序在运行时加载和链接共享库。</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;dlfcn.h&gt;                                                                                                                          </span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span>* <span class="title">dlopen</span><span class="params">(<span class="keyword">const</span> <span class="keyword">char</span>* filename, <span class="keyword">int</span> flag)</span></span>;</span><br><span class="line"><span class="comment">//返回：若成功则为指向句柄的指针，若出错则为NULL</span></span><br></pre></td></tr></table></figure>
+<p>​    <code>dlopen</code>函数加载和链接共享库<code>filename</code>。用以前带<code>RELD_GLOBAL</code>选项打开的库解析filename中的外部符号。如果当前可执行文件是带<code>-rdynamic</code>选项编译的，那么对符号解析而言，它的全局符号也是可用的。flag参数必须要么包括<code>RELD_NOW</code>,该标志告诉链接器立即解析外部符号的引用，要么包含<code>RELD_LAZY</code>标志，该标志指示链接器推迟符号解析直到执行来自库中的代码时。这两个中的任何一个都可以和<code>RELD_GLOBAL</code>标志取或。</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;dlfcn.h&gt;                                                                                                                          </span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span>* <span class="title">dlsym</span><span class="params">(<span class="keyword">void</span>* handle, <span class="keyword">char</span>* symbol)</span></span>;</span><br><span class="line"><span class="comment">//返回：若成功则为指向符号的指针，若出错则为NULL</span></span><br></pre></td></tr></table></figure>
+<p><code>dlsym</code>函数的输入是一个指向前面已经打开共享库的句柄和一个符号的名字，如果该符号存在，就返回符号的地址，否则则为NULL。</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;dlfcn.h&gt;                                                                                                                          </span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span>* <span class="title">dlclose</span><span class="params">(<span class="keyword">void</span>* handle, <span class="keyword">char</span>* symbol)</span></span>;</span><br><span class="line"><span class="comment">//返回：若成功则为指向符号的指针，若出错则为NULL</span></span><br></pre></td></tr></table></figure>
+<p>如果没有其他共享库还在使用这个共享库，<code>dlclose</code>函数就卸载该共享库。</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;dlfcn.h&gt;                                                                                                                          </span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">const</span> <span class="keyword">char</span>* <span class="title">dlerror</span><span class="params">(<span class="keyword">void</span>)</span></span>;</span><br><span class="line"><span class="comment">//返回：若前面对dlopen,dlsym,dlclose的调用失败，则为错误消息，若前面的调用成功，则为NULL。</span></span><br></pre></td></tr></table></figure>
+<p><code>dlerror</code>函数返回一个字符串,它描述的是调用<code>dlopen</code>,<code>dlsym</code>,<code>dlclose</code>函数时发生的最近的错误，如果没有错误发生则发回空。</p>
+<h4 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h4><p>在addvec.c文件中，创建下面的代码，构建一个动态库。</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;                                                                                                                           </span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">addvec</span><span class="params">(<span class="keyword">int</span>* x, <span class="keyword">int</span>* y, <span class="keyword">int</span>* z, <span class="keyword">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> i;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; n; i++)</span><br><span class="line">    &#123;   </span><br><span class="line">        z[i] = x[i] + y[i];</span><br><span class="line">    &#125;   </span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">gcc -shared -fPIC -o libaddvec.so addvec.c </span><br></pre></td></tr></table></figure>
+<p>在test.c文件中，动态的加载共享库，如下</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;dlfcn.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> x[<span class="number">2</span>] = &#123;<span class="number">1</span>, <span class="number">2</span>&#125;;</span><br><span class="line"><span class="keyword">int</span> y[<span class="number">2</span>] = &#123;<span class="number">3</span>, <span class="number">4</span>&#125;;</span><br><span class="line"><span class="keyword">int</span> z[<span class="number">2</span>];</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">void</span>* handle;</span><br><span class="line">    <span class="keyword">void</span> (*addvec)(<span class="keyword">int</span>*, <span class="keyword">int</span>*, <span class="keyword">int</span>*, <span class="keyword">int</span>);</span><br><span class="line">    <span class="keyword">char</span>* error;</span><br><span class="line">    <span class="comment">//dynamically load the shared library that contains addvec()</span></span><br><span class="line">    handle = dlopen(<span class="string">&quot;./libaddvec.so&quot;</span>, RTLD_LAZY);</span><br><span class="line">    <span class="keyword">if</span> (handle == <span class="literal">NULL</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">fprintf</span>(<span class="built_in">stderr</span>, <span class="string">&quot;%s\n&quot;</span>, dlerror());</span><br><span class="line">        <span class="built_in">exit</span>(<span class="number">1</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//get a pointer to the addvec() function we just loaded</span></span><br><span class="line">    addvec = dlsym(handle, <span class="string">&quot;addvec&quot;</span>);</span><br><span class="line">    <span class="keyword">if</span> ((error = dlerror()) != <span class="literal">NULL</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">fprintf</span>(<span class="built_in">stderr</span>, <span class="string">&quot;%s\n&quot;</span>, dlerror());</span><br><span class="line">        <span class="built_in">exit</span>(<span class="number">1</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//Now we can call addvec() just like any other function</span></span><br><span class="line">    addvec(x, y, z, <span class="number">2</span>);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;z = [%d %d]\n&quot;</span>, z[<span class="number">0</span>], z[<span class="number">1</span>]);</span><br><span class="line">    <span class="comment">//unload the shared library</span></span><br><span class="line">    <span class="keyword">if</span> (dlclose(handle) &lt; <span class="number">0</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">fprintf</span>(<span class="built_in">stderr</span>, <span class="string">&quot;%s\n&quot;</span>, dlerror());</span><br><span class="line">        <span class="built_in">exit</span>(<span class="number">1</span>);</span><br><span class="line">    &#125;</span><br><span class="line">                                                                                                                                                               </span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">s</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">gcc -rdynamic -O2 -o test test.c  -ldl</span><br></pre></td></tr></table></figure>
+<h3 id="处理目标文件的工具"><a href="#处理目标文件的工具" class="headerlink" title="处理目标文件的工具"></a>处理目标文件的工具</h3><p>​    在Unix系统中有大量可用的工具可以帮助你理解和处理目标文件。特别地，GNU binutils包尤其有帮助，而且可以运行在每个Unxi平台上。</p>
+<ul>
+<li><code>ar</code>：创建静态库，插入，删除，列出和提取成员；</li>
+<li><code>strings</code>：列出一个目标文件中，所有可打印的字符串；</li>
+<li><code>strip</code>：从目标文件中删除符号表信息；</li>
+<li><code>nm</code>：列出一个目标文件的符号表中定义的符号；</li>
+<li><code>size</code>：列出目标文件中节的名字和大小；</li>
+<li><code>readelf</code>：显示一个目标文件中的完整结构，包括ELF头中编码的所有信息。包含size和nm的功能；</li>
+<li><code>objdump</code>：所有二进制工具之母，能够显示一个目标文件中所有的信息。它最有用的功能是反汇编.text节中的二进制指令。</li>
+<li><code>ldd</code>：列出一个可执行文件在运行时所需要的共享库；（Unix系统为共享库提供的ldd程序）</li>
+</ul>
+<h3 id="操作进程的工具"><a href="#操作进程的工具" class="headerlink" title="操作进程的工具"></a>操作进程的工具</h3><p>​    unix系统提供了大量的监控和操作进程的有用工具：</p>
+<ul>
+<li><code>strace</code>：打印一个程序和它的子程序调用的每个系统调用的轨迹。对于好奇的学生而言，这是一个令人着迷的工具。用-static编译你的程序，能得到一个清晰的轨迹，而不带有大量与共享库相关的输出；</li>
+<li><code>ps</code>：列出系统中当前的进程（包括僵尸进程）；</li>
+<li><code>top</code>：打印出关于当前进程资源的使用的信息；</li>
+<li><code>kill</code>：发送一个信号给进程。对于调试带信号处理程序以及清除难以捉摸的进程是非常有用的。</li>
+<li><code>/proc</code>：一个虚拟文件系统，以ASCII文本格式输出大量内核数据结构的内容，用户程序可以读取这些内容。</li>
+</ul>
+<h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><p>​    全文皆是摘录自<a href="https://gitee.com/helioswei/books">《深入理解计算机系统》</a>一书，用于自己的学习和理解，若存在侵权请联系作者。</p>
+]]></content>
+      <categories>
+        <category>Cpp</category>
+        <category>memory</category>
+      </categories>
+      <tags>
+        <tag>memory</tag>
+      </tags>
   </entry>
   <entry>
     <title>cuda-cuda10.0安装</title>
@@ -862,24 +1119,6 @@
       </tags>
   </entry>
   <entry>
-    <title>git-大文件上传管理</title>
-    <url>/article/3538252460.html</url>
-    <content><![CDATA[<h3 id="git-lfs安装和配置"><a href="#git-lfs安装和配置" class="headerlink" title="git lfs安装和配置"></a>git lfs安装和配置</h3><p>git lfs 需要客户端支持, 请根据自己的操作系统下载对应的客户端</p>
-<p><a href="https://git-lfs.github.com/">git lfs客户端下载</a></p>
-<p><code>以Centos7为例，下载客户端后运行rpm安装</code></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">rpm -i git-lfs-2.2.1-1.el7.x86_64.rpm</span><br><span class="line">git lfs install（完成初始化）</span><br></pre></td></tr></table></figure>
-<h3 id="设置管理的文件类型"><a href="#设置管理的文件类型" class="headerlink" title="设置管理的文件类型"></a>设置管理的文件类型</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#压缩包</span><br><span class="line">git lfs track *.tar *.tar.gz *.tgz *.zip *.7z</span><br><span class="line">#图片</span><br><span class="line">git lfs track *.jpg *.png *.jpeg *.bmp *.gif *.tiff</span><br><span class="line">#库</span><br><span class="line">git lfs track *.jar *.war *.so *.so.*</span><br><span class="line">#非文本文档</span><br><span class="line">git  lfs  track *.doc *.docx *.ppt *.pptx *.pdf *.xls *.xlsx</span><br><span class="line">#安装包</span><br><span class="line">git  lfs  track *.rpm *.deb *.img *.iso</span><br></pre></td></tr></table></figure>
-<p><code>设置完之后会在项目根目录下出现.gitattributes文件</code></p>
-]]></content>
-      <categories>
-        <category>Tool</category>
-        <category>git</category>
-      </categories>
-      <tags>
-        <tag>lfs</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>gcc-5.1.0源码安装</title>
     <url>/article/2230395924.html</url>
     <content><![CDATA[<p>对于一些源码的编译如poco库，需要的GCC的版本要求比较高，所以需要源码编译GCC、</p>
@@ -895,6 +1134,24 @@
       </categories>
       <tags>
         <tag>gcc</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>git-大文件上传管理</title>
+    <url>/article/3538252460.html</url>
+    <content><![CDATA[<h3 id="git-lfs安装和配置"><a href="#git-lfs安装和配置" class="headerlink" title="git lfs安装和配置"></a>git lfs安装和配置</h3><p>git lfs 需要客户端支持, 请根据自己的操作系统下载对应的客户端</p>
+<p><a href="https://git-lfs.github.com/">git lfs客户端下载</a></p>
+<p><code>以Centos7为例，下载客户端后运行rpm安装</code></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">rpm -i git-lfs-2.2.1-1.el7.x86_64.rpm</span><br><span class="line">git lfs install（完成初始化）</span><br></pre></td></tr></table></figure>
+<h3 id="设置管理的文件类型"><a href="#设置管理的文件类型" class="headerlink" title="设置管理的文件类型"></a>设置管理的文件类型</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#压缩包</span><br><span class="line">git lfs track *.tar *.tar.gz *.tgz *.zip *.7z</span><br><span class="line">#图片</span><br><span class="line">git lfs track *.jpg *.png *.jpeg *.bmp *.gif *.tiff</span><br><span class="line">#库</span><br><span class="line">git lfs track *.jar *.war *.so *.so.*</span><br><span class="line">#非文本文档</span><br><span class="line">git  lfs  track *.doc *.docx *.ppt *.pptx *.pdf *.xls *.xlsx</span><br><span class="line">#安装包</span><br><span class="line">git  lfs  track *.rpm *.deb *.img *.iso</span><br></pre></td></tr></table></figure>
+<p><code>设置完之后会在项目根目录下出现.gitattributes文件</code></p>
+]]></content>
+      <categories>
+        <category>Tool</category>
+        <category>git</category>
+      </categories>
+      <tags>
+        <tag>lfs</tag>
       </tags>
   </entry>
   <entry>
@@ -1112,24 +1369,6 @@
       </tags>
   </entry>
   <entry>
-    <title>image-libraw相机图片库源码编译</title>
-    <url>/article/1731984249.html</url>
-    <content><![CDATA[<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">LibRaw is a library for reading RAW files from digital photo cameras (CRW&#x2F;CR2, NEF, RAF, DNG, MOS, KDC, DCR, etc, virtually all RAW formats are supported).</span><br></pre></td></tr></table></figure>
-<h3 id="一，源码下载"><a href="#一，源码下载" class="headerlink" title="一，源码下载"></a>一，源码下载</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git clone https:&#x2F;&#x2F;github.com&#x2F;LibRaw&#x2F;LibRaw.git</span><br></pre></td></tr></table></figure>
-<h3 id="二，编译环境准备"><a href="#二，编译环境准备" class="headerlink" title="二，编译环境准备"></a>二，编译环境准备</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">1，查看文件DEVELOPER-NOTES，提示我们,执行mkdist.sh脚本来生成编译的东西</span><br><span class="line">2， 安装需要的软件</span><br><span class="line">	 yum install autoconf automake freetype-devel gcc gcc-c++ libtool make pkgconfig -y</span><br><span class="line">	 yum install wget -y</span><br><span class="line">	 yum install lcms2 lcms2-devel -y</span><br><span class="line">	 yum install jasper jasper-devel</span><br></pre></td></tr></table></figure>
-<h3 id="三，准备编译遇到的错误"><a href="#三，准备编译遇到的错误" class="headerlink" title="三，准备编译遇到的错误"></a>三，准备编译遇到的错误</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">下载dcraw.c失败，我们需要手动的下载</span><br><span class="line">修改mkdist.sh脚本文件</span><br><span class="line">wget https:&#x2F;&#x2F;www.dechifro.org&#x2F;dcraw&#x2F;dcraw.c</span><br><span class="line">然后在执行 mkdist.sh脚本</span><br></pre></td></tr></table></figure>
-<h3 id="四，编译"><a href="#四，编译" class="headerlink" title="四，编译"></a>四，编译</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">.&#x2F;configure --prefix&#x3D;&#x2F;usr&#x2F;local&#x2F;helios CXX&#x3D;&#x2F;usr&#x2F;local&#x2F;bin&#x2F;g++</span><br><span class="line">make</span><br><span class="line">make install</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<h3 id="五，执行遇到的问题"><a href="#五，执行遇到的问题" class="headerlink" title="五，执行遇到的问题"></a>五，执行遇到的问题</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">在程序中执行 open_file CR2的时候程序崩溃，因为自己的g++编译是4.8.5的，但是更新到4.9.2后就成功了</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>Media</category>
-        <category>image</category>
-      </categories>
-      <tags>
-        <tag>libraw</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>hexo-常用命令</title>
     <url>/article/3973852728.html</url>
     <content><![CDATA[<p>&nbsp;&nbsp;&nbsp;&nbsp;记录一下hexo经常使用的命令，发现自己好久没有hexo，命令都不记得了。</p>
@@ -1146,6 +1385,24 @@
       </categories>
       <tags>
         <tag>cmd</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>image-libraw相机图片库源码编译</title>
+    <url>/article/1731984249.html</url>
+    <content><![CDATA[<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">LibRaw is a library for reading RAW files from digital photo cameras (CRW&#x2F;CR2, NEF, RAF, DNG, MOS, KDC, DCR, etc, virtually all RAW formats are supported).</span><br></pre></td></tr></table></figure>
+<h3 id="一，源码下载"><a href="#一，源码下载" class="headerlink" title="一，源码下载"></a>一，源码下载</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git clone https:&#x2F;&#x2F;github.com&#x2F;LibRaw&#x2F;LibRaw.git</span><br></pre></td></tr></table></figure>
+<h3 id="二，编译环境准备"><a href="#二，编译环境准备" class="headerlink" title="二，编译环境准备"></a>二，编译环境准备</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">1，查看文件DEVELOPER-NOTES，提示我们,执行mkdist.sh脚本来生成编译的东西</span><br><span class="line">2， 安装需要的软件</span><br><span class="line">	 yum install autoconf automake freetype-devel gcc gcc-c++ libtool make pkgconfig -y</span><br><span class="line">	 yum install wget -y</span><br><span class="line">	 yum install lcms2 lcms2-devel -y</span><br><span class="line">	 yum install jasper jasper-devel</span><br></pre></td></tr></table></figure>
+<h3 id="三，准备编译遇到的错误"><a href="#三，准备编译遇到的错误" class="headerlink" title="三，准备编译遇到的错误"></a>三，准备编译遇到的错误</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">下载dcraw.c失败，我们需要手动的下载</span><br><span class="line">修改mkdist.sh脚本文件</span><br><span class="line">wget https:&#x2F;&#x2F;www.dechifro.org&#x2F;dcraw&#x2F;dcraw.c</span><br><span class="line">然后在执行 mkdist.sh脚本</span><br></pre></td></tr></table></figure>
+<h3 id="四，编译"><a href="#四，编译" class="headerlink" title="四，编译"></a>四，编译</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">.&#x2F;configure --prefix&#x3D;&#x2F;usr&#x2F;local&#x2F;helios CXX&#x3D;&#x2F;usr&#x2F;local&#x2F;bin&#x2F;g++</span><br><span class="line">make</span><br><span class="line">make install</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h3 id="五，执行遇到的问题"><a href="#五，执行遇到的问题" class="headerlink" title="五，执行遇到的问题"></a>五，执行遇到的问题</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">在程序中执行 open_file CR2的时候程序崩溃，因为自己的g++编译是4.8.5的，但是更新到4.9.2后就成功了</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>Media</category>
+        <category>image</category>
+      </categories>
+      <tags>
+        <tag>libraw</tag>
       </tags>
   </entry>
   <entry>
@@ -1212,22 +1469,6 @@
       </tags>
   </entry>
   <entry>
-    <title>mupdf-源码安装</title>
-    <url>/article/3549577056.html</url>
-    <content><![CDATA[<h3 id="一，源码下载"><a href="#一，源码下载" class="headerlink" title="一，源码下载"></a>一，源码下载</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">直接到官网上下载源码包</span><br><span class="line">https:&#x2F;&#x2F;www.mupdf.com&#x2F;downloads&#x2F;index.html</span><br><span class="line">mupdf-1.16.1-source.tar.gz</span><br></pre></td></tr></table></figure>
-<h3 id="二，相关依赖下载"><a href="#二，相关依赖下载" class="headerlink" title="二，相关依赖下载"></a>二，相关依赖下载</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.</span><br><span class="line">You should have received a copy of the GNU Affero General Public License along with this program. If not, see http:&#x2F;&#x2F;www.gnu.org&#x2F;licenses</span><br><span class="line"></span><br><span class="line">yum install freeglut-devel</span><br></pre></td></tr></table></figure>
-<h3 id="三，编译安装"><a href="#三，编译安装" class="headerlink" title="三，编译安装"></a>三，编译安装</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">make prefix&#x3D;&#x2F;usr&#x2F;local install</span><br></pre></td></tr></table></figure>
-<h3 id="四，使用注意"><a href="#四，使用注意" class="headerlink" title="四，使用注意"></a>四，使用注意</h3><p>在cmake的项目中使用静态库的时候，你只能生成静态链接库，在生成应用的时候，链接静态库和动态库都是一样的用法</p>
-]]></content>
-      <categories>
-        <category>Media</category>
-        <category>doc</category>
-      </categories>
-      <tags>
-        <tag>mupdf</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>linux-生成ssh key</title>
     <url>/article/2022323734.html</url>
     <content><![CDATA[<p>​    我们在使用git的时候经常需要用到ssh的连接，本文记录一下自己在使用的时候怎么生成的ssh key的过程。</p>
@@ -1253,6 +1494,22 @@
       </categories>
       <tags>
         <tag>ssh</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>mupdf-源码安装</title>
+    <url>/article/3549577056.html</url>
+    <content><![CDATA[<h3 id="一，源码下载"><a href="#一，源码下载" class="headerlink" title="一，源码下载"></a>一，源码下载</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">直接到官网上下载源码包</span><br><span class="line">https:&#x2F;&#x2F;www.mupdf.com&#x2F;downloads&#x2F;index.html</span><br><span class="line">mupdf-1.16.1-source.tar.gz</span><br></pre></td></tr></table></figure>
+<h3 id="二，相关依赖下载"><a href="#二，相关依赖下载" class="headerlink" title="二，相关依赖下载"></a>二，相关依赖下载</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.</span><br><span class="line">You should have received a copy of the GNU Affero General Public License along with this program. If not, see http:&#x2F;&#x2F;www.gnu.org&#x2F;licenses</span><br><span class="line"></span><br><span class="line">yum install freeglut-devel</span><br></pre></td></tr></table></figure>
+<h3 id="三，编译安装"><a href="#三，编译安装" class="headerlink" title="三，编译安装"></a>三，编译安装</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">make prefix&#x3D;&#x2F;usr&#x2F;local install</span><br></pre></td></tr></table></figure>
+<h3 id="四，使用注意"><a href="#四，使用注意" class="headerlink" title="四，使用注意"></a>四，使用注意</h3><p>在cmake的项目中使用静态库的时候，你只能生成静态链接库，在生成应用的时候，链接静态库和动态库都是一样的用法</p>
+]]></content>
+      <categories>
+        <category>Media</category>
+        <category>doc</category>
+      </categories>
+      <tags>
+        <tag>mupdf</tag>
       </tags>
   </entry>
   <entry>
@@ -1310,21 +1567,6 @@
       </tags>
   </entry>
   <entry>
-    <title>poco-源码编译包含mysql</title>
-    <url>/article/3587508548.html</url>
-    <content><![CDATA[<h3 id="一，源码下载库"><a href="#一，源码下载库" class="headerlink" title="一，源码下载库"></a>一，源码下载库</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">先在git上fork，然后同步到码云上，在clone可以加快下载的速度</span><br><span class="line">git clone https:&#x2F;&#x2F;gitee.com&#x2F;helioswei&#x2F;poco.git</span><br></pre></td></tr></table></figure>
-<h3 id="二，编译环境准备"><a href="#二，编译环境准备" class="headerlink" title="二，编译环境准备"></a>二，编译环境准备</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">yum install gcc-c++ make openssl-devel</span><br></pre></td></tr></table></figure>
-<h3 id="三，安装mysql"><a href="#三，安装mysql" class="headerlink" title="三，安装mysql"></a>三，安装mysql</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">见mysql的源码安装，安装时没有头文件，所以我们需要安装头文件</span><br><span class="line">yum install mysql-devel</span><br></pre></td></tr></table></figure>
-<h3 id="四，编译"><a href="#四，编译" class="headerlink" title="四，编译"></a>四，编译</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">需要提前安装GCC5.1.0来支持c++14</span><br><span class="line">.&#x2F;configure --shared --prefix&#x3D;&#x2F;usr&#x2F;local&#x2F;poco  --cflags&#x3D;-std&#x3D;c++14 --include-path&#x3D;&#x2F;usr&#x2F;include&#x2F;mysql&#x2F; --library-path&#x3D;&#x2F;usr&#x2F;lib64&#x2F;mysql&#x2F; --omit&#x3D;Data&#x2F;ODBC,MongoDB,PDF</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>Cpp</category>
-      </categories>
-      <tags>
-        <tag>poco</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>opencv-源码安装</title>
     <url>/article/3084764285.html</url>
     <content><![CDATA[<h3 id="一，源码下载"><a href="#一，源码下载" class="headerlink" title="一，源码下载"></a>一，源码下载</h3><p>​        通过git源码下载OpenCV，直接在GitHub上下载的速度特别慢，所以我们需要先将其fork，然后同步到gitee上面，通过自己的gitee账号来进行下载，这个速度比较快。</p>
@@ -1339,6 +1581,21 @@
       </categories>
       <tags>
         <tag>opencv</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>poco-源码编译包含mysql</title>
+    <url>/article/3587508548.html</url>
+    <content><![CDATA[<h3 id="一，源码下载库"><a href="#一，源码下载库" class="headerlink" title="一，源码下载库"></a>一，源码下载库</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">先在git上fork，然后同步到码云上，在clone可以加快下载的速度</span><br><span class="line">git clone https:&#x2F;&#x2F;gitee.com&#x2F;helioswei&#x2F;poco.git</span><br></pre></td></tr></table></figure>
+<h3 id="二，编译环境准备"><a href="#二，编译环境准备" class="headerlink" title="二，编译环境准备"></a>二，编译环境准备</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">yum install gcc-c++ make openssl-devel</span><br></pre></td></tr></table></figure>
+<h3 id="三，安装mysql"><a href="#三，安装mysql" class="headerlink" title="三，安装mysql"></a>三，安装mysql</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">见mysql的源码安装，安装时没有头文件，所以我们需要安装头文件</span><br><span class="line">yum install mysql-devel</span><br></pre></td></tr></table></figure>
+<h3 id="四，编译"><a href="#四，编译" class="headerlink" title="四，编译"></a>四，编译</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">需要提前安装GCC5.1.0来支持c++14</span><br><span class="line">.&#x2F;configure --shared --prefix&#x3D;&#x2F;usr&#x2F;local&#x2F;poco  --cflags&#x3D;-std&#x3D;c++14 --include-path&#x3D;&#x2F;usr&#x2F;include&#x2F;mysql&#x2F; --library-path&#x3D;&#x2F;usr&#x2F;lib64&#x2F;mysql&#x2F; --omit&#x3D;Data&#x2F;ODBC,MongoDB,PDF</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>Cpp</category>
+      </categories>
+      <tags>
+        <tag>poco</tag>
       </tags>
   </entry>
   <entry>
@@ -1509,22 +1766,6 @@
       </tags>
   </entry>
   <entry>
-    <title>系统io状态排查</title>
-    <url>/article/4148759935.html</url>
-    <content><![CDATA[<p>&nbsp;&nbsp;&nbsp;&nbsp;这几天在排查自己写的转码服务性能上不去，转码特别慢，正常情况下，转码时CPU可以飙到很高，但是在问题机器上CPU只要50%左右，排查了好久，最终确定是某个其它服务io资源占用了太多，导致了我的转码服务io占用几乎没有，所以出现了问题，介绍几个io的工具，帮助以后查看系统的情况。</p>
-<h3 id="iostat"><a href="#iostat" class="headerlink" title="iostat"></a>iostat</h3><p>&nbsp;&nbsp;&nbsp;&nbsp;iostat主要是用来查看系统的io使用情况，<br>只记录自己使用的命令</p>
-<h4 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">yum install sysstat</span><br></pre></td></tr></table></figure>
-<h4 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">iostat [-c ] [ -d ] [ -k ] [ -m ] [ -x ]</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>Linux</category>
-        <category>centos7</category>
-      </categories>
-      <tags>
-        <tag>io</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>相机底片的解析</title>
     <url>/article/4054922039.html</url>
     <content><![CDATA[<p>&nbsp;&nbsp;&nbsp;&nbsp;公司要求对相机原生格式如后缀为dng,CR2等的图片进行转码，然后预览，自己查找了一下资料，目前仅仅是用命令行来进行处理的，因为我们是linux端的服务，所以直接封装命令行比较的简单。</p>
@@ -1543,6 +1784,22 @@
       <tags>
         <tag>image</tag>
         <tag>RAW</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>系统io状态排查</title>
+    <url>/article/4148759935.html</url>
+    <content><![CDATA[<p>&nbsp;&nbsp;&nbsp;&nbsp;这几天在排查自己写的转码服务性能上不去，转码特别慢，正常情况下，转码时CPU可以飙到很高，但是在问题机器上CPU只要50%左右，排查了好久，最终确定是某个其它服务io资源占用了太多，导致了我的转码服务io占用几乎没有，所以出现了问题，介绍几个io的工具，帮助以后查看系统的情况。</p>
+<h3 id="iostat"><a href="#iostat" class="headerlink" title="iostat"></a>iostat</h3><p>&nbsp;&nbsp;&nbsp;&nbsp;iostat主要是用来查看系统的io使用情况，<br>只记录自己使用的命令</p>
+<h4 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">yum install sysstat</span><br></pre></td></tr></table></figure>
+<h4 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">iostat [-c ] [ -d ] [ -k ] [ -m ] [ -x ]</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>Linux</category>
+        <category>centos7</category>
+      </categories>
+      <tags>
+        <tag>io</tag>
       </tags>
   </entry>
 </search>
