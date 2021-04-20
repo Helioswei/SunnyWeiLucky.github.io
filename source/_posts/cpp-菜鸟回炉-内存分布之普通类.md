@@ -1,8 +1,11 @@
 ---
 title: cpp-菜鸟回炉-内存分布之普通类
-date: 2021-03-28 15:14:20
-categories: [Cpp,memory]
+categories:
+  - Cpp
+  - memory
 tags: memory
+abbrlink: 202723234
+date: 2021-03-28 15:14:20
 ---
 
 ​	本文记录一下CPP关于类的内存存储的情况，根据自己目前的水平写的文章，不当之处请指正。后期会根据自己的所学以及在实际的应用中来不断的更新自己的认识。目前自己使用的平台是Ubuntu18, g++7.4

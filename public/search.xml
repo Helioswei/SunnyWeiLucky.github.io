@@ -80,6 +80,22 @@
       </tags>
   </entry>
   <entry>
+    <title>centos7-yum的使用</title>
+    <url>/article/1714992348.html</url>
+    <content><![CDATA[<p>记录yum的使用</p>
+<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><h4 id="搜索指定的版本安装"><a href="#搜索指定的版本安装" class="headerlink" title="搜索指定的版本安装"></a>搜索指定的版本安装</h4><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">yum list --showduplicates xxx</span><br></pre></td></tr></table></figure>
+<h4 id="下载软件包"><a href="#下载软件包" class="headerlink" title="下载软件包"></a>下载软件包</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">yum install yum-plugin-downloadonly</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">yum install fontconfig --downloadonly --downloaddir&#x3D;&#x2F;root&#x2F;wei&#x2F;</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>Linux</category>
+        <category>centos7</category>
+      </categories>
+      <tags>
+        <tag>yum</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>centos7-openoffice安装和启动</title>
     <url>/article/1736132591.html</url>
     <content><![CDATA[<p>  本文介绍了openoffice在Centos7下的安装和启动以及使用的方法，供大家学习和参考。</p>
@@ -106,22 +122,6 @@
       </categories>
       <tags>
         <tag>openoffice</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>centos7-yum的使用</title>
-    <url>/article/1714992348.html</url>
-    <content><![CDATA[<p>记录yum的使用</p>
-<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><h4 id="搜索指定的版本安装"><a href="#搜索指定的版本安装" class="headerlink" title="搜索指定的版本安装"></a>搜索指定的版本安装</h4><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">yum list --showduplicates xxx</span><br></pre></td></tr></table></figure>
-<h4 id="下载软件包"><a href="#下载软件包" class="headerlink" title="下载软件包"></a>下载软件包</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">yum install yum-plugin-downloadonly</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">yum install fontconfig --downloadonly --downloaddir&#x3D;&#x2F;root&#x2F;wei&#x2F;</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>Linux</category>
-        <category>centos7</category>
-      </categories>
-      <tags>
-        <tag>yum</tag>
       </tags>
   </entry>
   <entry>
@@ -509,6 +509,30 @@
       </tags>
   </entry>
   <entry>
+    <title>cpp-菜鸟回炉-内存分布之普通类</title>
+    <url>/article/202723234.html</url>
+    <content><![CDATA[<p>​    本文记录一下CPP关于类的内存存储的情况，根据自己目前的水平写的文章，不当之处请指正。后期会根据自己的所学以及在实际的应用中来不断的更新自己的认识。目前自己使用的平台是Ubuntu18, g++7.4</p>
+<h3 id="空类，空结构体，空联合体"><a href="#空类，空结构体，空联合体" class="headerlink" title="空类，空结构体，空联合体"></a>空类，空结构体，空联合体</h3><p>​    在CPP中，对于空类（class），空结构体（struct），空联合体（union）来说，其 内存大小为<code>1</code>。在C语言中，对空结构体，空联合体，其内存大小为0（c语言中没有类）。原因是：CPP中规定，不同的对象必须拥有不同的地址，如果为0为导致两个类的地址一样，在内存地址上就不能区分该类实例化的实例了。所以为了实现这个标准，编译器往往会给一个空类隐含的加一个字节，这样空类字实例化后字内存得到了一个独一无二的地址。如果不是空类，那么一个占位符就会失效，内存空间直接就是这些占内存的总和。参考我<a href="https://www.helioswei.top/article/734109955.html#more">内存对齐文章</a></p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> PR(x) std::cout &lt;&lt; #x &lt;&lt; <span class="meta-string">&quot;:&quot;</span> &lt;&lt; x &lt;&lt; std::endl;</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">A</span> &#123;</span>&#125;;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">C</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="keyword">static</span> <span class="keyword">int</span> a;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="class"><span class="keyword">union</span> <span class="title">B</span> &#123;</span>&#125;;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    PR(<span class="keyword">sizeof</span>(A));</span><br><span class="line">    PR(<span class="keyword">sizeof</span>(B));</span><br><span class="line">    PR(<span class="keyword">sizeof</span>(C));</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;                                                                                                                                           </span><br></pre></td></tr></table></figure>
+<h3 id="加入函数"><a href="#加入函数" class="headerlink" title="加入函数"></a>加入函数</h3><h4 id="加入普通函数"><a href="#加入普通函数" class="headerlink" title="加入普通函数"></a>加入普通函数</h4><p>​    如果我们往空类中加入函数（普通函数，构造函数，析构函数，静态函数，const函数），那么其内存大小会有变化吗？其内存大小<code>sizeof(C)</code>还是为1，因为其没有成员变量，成员函数是不占用这个类的内存空间的。</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">C</span>                                                                                                                                     </span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    C()</span><br><span class="line">    &#123;   </span><br><span class="line">        PR(<span class="string">&quot;构造函数&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    ~C()</span><br><span class="line">    &#123;   </span><br><span class="line">        PR(<span class="string">&quot;析构函数&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">sum</span><span class="params">()</span></span></span><br><span class="line"><span class="function">    </span>&#123;   </span><br><span class="line">        <span class="keyword">int</span> a = <span class="number">10</span>;</span><br><span class="line">        <span class="keyword">return</span> a ;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">add</span><span class="params">()</span></span></span><br><span class="line"><span class="function">    </span>&#123;   </span><br><span class="line">        <span class="keyword">int</span> a = <span class="number">10</span>; </span><br><span class="line">        <span class="keyword">int</span> b = <span class="number">20</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">const</span> <span class="keyword">int</span>  <span class="title">getA</span><span class="params">()</span></span></span><br><span class="line"><span class="function">    </span>&#123;   </span><br><span class="line">        <span class="keyword">return</span> <span class="number">10</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h4 id="加入虚函数"><a href="#加入虚函数" class="headerlink" title="加入虚函数"></a>加入虚函数</h4><p>​    如果我们往这个类里面加入虚函数，其结果内存空间的大小会是多少呢？其内存大小<code>sizeof(c)</code>为8，这是因为虚函数会有一个<code>虚表指针</code>，其大小为<code>一个指针</code>的占有的内存大小，布局在<code>类的开头</code>。编译器是在构造函数中创建这个虚表指针以及虚表的。类定义时只是在类的开头加了一个指向虚函数表的指针，而不是在类里加入虚函数数组。虚函数表也不是定义在类中的，这个类在产生多个对象是，会共用同样的虚函数表。纯虚函数同理。</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">C</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    C() </span><br><span class="line">    &#123;   </span><br><span class="line">        PR(<span class="string">&quot;构造函数&quot;</span>);</span><br><span class="line">    &#125;   </span><br><span class="line">    ~C()</span><br><span class="line">    &#123;   </span><br><span class="line">        PR(<span class="string">&quot;析构函数&quot;</span>);</span><br><span class="line">    &#125;                                                                                                                                       </span><br><span class="line">    <span class="function"><span class="keyword">virtual</span> <span class="keyword">void</span> <span class="title">test</span><span class="params">()</span></span>;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h3 id="继承类的内存大小"><a href="#继承类的内存大小" class="headerlink" title="继承类的内存大小"></a>继承类的内存大小</h3><h4 id="普通继承"><a href="#普通继承" class="headerlink" title="普通继承"></a>普通继承</h4><p>​    没有虚函数的基础，我们子类的空间大小会包含父类成员变量的大小以及自身定义的成员变量大小。内存分布是基类的在前面，子类的在后面。</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"> <span class="number">1</span> <span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;                                                                                                                     </span></span></span><br><span class="line"> <span class="number">2</span> <span class="meta">#<span class="meta-keyword">define</span> PR(x) std::cout &lt;&lt; #x &lt;&lt; <span class="meta-string">&quot;:&quot;</span> &lt;&lt; x &lt;&lt; std::endl;</span></span><br><span class="line"> <span class="number">3</span> </span><br><span class="line"> <span class="number">4</span> <span class="class"><span class="keyword">class</span> <span class="title">Base</span></span></span><br><span class="line"><span class="class"> 5 &#123;</span></span><br><span class="line"> <span class="number">6</span> <span class="keyword">public</span> :</span><br><span class="line"> <span class="number">7</span>     <span class="keyword">int</span> a;</span><br><span class="line"> <span class="number">8</span> <span class="keyword">private</span>:</span><br><span class="line"> <span class="number">9</span>     <span class="keyword">int</span> b;</span><br><span class="line"><span class="number">10</span> &#125;;</span><br><span class="line"><span class="number">11</span> <span class="class"><span class="keyword">class</span> <span class="title">Son</span> :</span> <span class="keyword">public</span> Base</span><br><span class="line"><span class="number">12</span> &#123;</span><br><span class="line"><span class="number">13</span> <span class="keyword">public</span>:</span><br><span class="line"><span class="number">14</span>     <span class="keyword">int</span> c;</span><br><span class="line"><span class="number">15</span> &#125;;</span><br><span class="line"><span class="number">16</span> <span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function">17 </span>&#123;</span><br><span class="line"><span class="number">18</span>     PR(<span class="keyword">sizeof</span>(Base));<span class="comment">//sizeof(Base) 8</span></span><br><span class="line"><span class="number">19</span>     PR(<span class="keyword">sizeof</span>(Son));<span class="comment">//sizeof(Son) 12</span></span><br><span class="line"><span class="number">20</span>     <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line"><span class="number">21</span> &#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h4 id="有虚函数的继承"><a href="#有虚函数的继承" class="headerlink" title="有虚函数的继承"></a>有虚函数的继承</h4><p>​    子类会继承父类的虚函数指针。</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"> <span class="number">6</span> <span class="keyword">public</span> :</span><br><span class="line"> <span class="number">1</span> <span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"> <span class="number">2</span> <span class="meta">#<span class="meta-keyword">define</span> PR(x) std::cout &lt;&lt; #x &lt;&lt; <span class="meta-string">&quot;:&quot;</span> &lt;&lt; x &lt;&lt; std::endl;</span></span><br><span class="line"> <span class="number">3</span> </span><br><span class="line"> <span class="number">4</span> <span class="class"><span class="keyword">class</span> <span class="title">Base</span></span></span><br><span class="line"><span class="class"> 5 &#123;</span></span><br><span class="line"> <span class="number">6</span> <span class="keyword">public</span> :</span><br><span class="line"> <span class="number">7</span>     <span class="keyword">int</span> a;</span><br><span class="line"> <span class="number">8</span> <span class="keyword">private</span>:</span><br><span class="line"> <span class="number">9</span>     <span class="keyword">int</span> b;</span><br><span class="line"><span class="number">10</span>     <span class="function"><span class="keyword">virtual</span> <span class="keyword">void</span> <span class="title">print</span><span class="params">()</span></span></span><br><span class="line"><span class="function">11     </span>&#123;</span><br><span class="line"><span class="number">12</span>         PR(<span class="string">&quot;Base&quot;</span>)</span><br><span class="line"><span class="number">13</span>     &#125;;</span><br><span class="line"><span class="number">14</span> &#125;;</span><br><span class="line"><span class="number">15</span> </span><br><span class="line"><span class="number">16</span> <span class="class"><span class="keyword">class</span> <span class="title">Son</span> :</span> <span class="keyword">public</span> Base</span><br><span class="line"><span class="number">17</span> &#123;</span><br><span class="line"><span class="number">18</span> <span class="keyword">public</span>:</span><br><span class="line"><span class="number">19</span>     <span class="keyword">int</span> c;</span><br><span class="line"><span class="number">20</span>     <span class="function"><span class="keyword">void</span> <span class="title">print</span><span class="params">()</span></span></span><br><span class="line"><span class="function">21     </span>&#123;</span><br><span class="line"><span class="number">22</span> </span><br><span class="line"><span class="number">23</span>         PR(<span class="string">&quot;Son&quot;</span>);</span><br><span class="line"><span class="number">24</span>     &#125;</span><br><span class="line"><span class="number">25</span> &#125;;</span><br><span class="line"><span class="number">26</span> </span><br><span class="line"><span class="number">27</span> <span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function">28 </span>&#123;</span><br><span class="line"><span class="number">29</span>     Son son;</span><br><span class="line"><span class="number">30</span>     son.print();</span><br><span class="line"><span class="number">31</span>     PR(<span class="keyword">sizeof</span>(Base));<span class="comment">//sizeof(Base) 8 + 4 + 4 = 16,内存对齐</span></span><br><span class="line"><span class="number">32</span>     <span class="comment">//            vptr a  b   c  xx</span></span><br><span class="line"><span class="number">33</span>     <span class="comment">//sizeof(Son) 8 + 4 + 4 + 4 +4 = 24</span></span><br><span class="line"><span class="number">34</span>     PR(<span class="keyword">sizeof</span>(Son));</span><br><span class="line"><span class="number">35</span>     <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line"><span class="number">36</span> &#125;  </span><br></pre></td></tr></table></figure>
+<h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><p><a href="https://blog.nowcoder.net/n/cc17d398f41a4beb82b663ca0a72f35c">https://blog.nowcoder.net/n/cc17d398f41a4beb82b663ca0a72f35c</a></p>
+]]></content>
+      <categories>
+        <category>Cpp</category>
+        <category>memory</category>
+      </categories>
+      <tags>
+        <tag>memory</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>cpp-菜鸟回炉-操作系统内存对齐</title>
     <url>/article/734109955.html</url>
     <content><![CDATA[<p> 最为一名程序员，你知道一个基础变量在计算机是怎样存储的吗？你知道一个整数占多大的空间？一个结构体占多大的空间？一个联合体占多个的空间？</p>
@@ -611,7 +635,7 @@
 <li><code>bss</code>：bss区主要存放的是未初始化的全局变量、静态变量，这些未初始化的数据在程序执行前会自动被系统初始化为0或者NULL；</li>
 </ul>
 </li>
-<li><code>只读区</code>：主要存放const修饰的变量/字符常量，二进制代码。<ul>
+<li><code>只读区</code>：主要存放const修饰的变量/字符常量，二进制代码。(关于const变量存疑？)<ul>
 <li>init：</li>
 <li>text：已经编译的程序的代码；</li>
 <li>rodata：只读数据，比如printf语句中的格式串和switch语句的跳转表；</li>
@@ -1084,6 +1108,24 @@
       </tags>
   </entry>
   <entry>
+    <title>git-大文件上传管理</title>
+    <url>/article/3538252460.html</url>
+    <content><![CDATA[<h3 id="git-lfs安装和配置"><a href="#git-lfs安装和配置" class="headerlink" title="git lfs安装和配置"></a>git lfs安装和配置</h3><p>git lfs 需要客户端支持, 请根据自己的操作系统下载对应的客户端</p>
+<p><a href="https://git-lfs.github.com/">git lfs客户端下载</a></p>
+<p><code>以Centos7为例，下载客户端后运行rpm安装</code></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">rpm -i git-lfs-2.2.1-1.el7.x86_64.rpm</span><br><span class="line">git lfs install（完成初始化）</span><br></pre></td></tr></table></figure>
+<h3 id="设置管理的文件类型"><a href="#设置管理的文件类型" class="headerlink" title="设置管理的文件类型"></a>设置管理的文件类型</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#压缩包</span><br><span class="line">git lfs track *.tar *.tar.gz *.tgz *.zip *.7z</span><br><span class="line">#图片</span><br><span class="line">git lfs track *.jpg *.png *.jpeg *.bmp *.gif *.tiff</span><br><span class="line">#库</span><br><span class="line">git lfs track *.jar *.war *.so *.so.*</span><br><span class="line">#非文本文档</span><br><span class="line">git  lfs  track *.doc *.docx *.ppt *.pptx *.pdf *.xls *.xlsx</span><br><span class="line">#安装包</span><br><span class="line">git  lfs  track *.rpm *.deb *.img *.iso</span><br></pre></td></tr></table></figure>
+<p><code>设置完之后会在项目根目录下出现.gitattributes文件</code></p>
+]]></content>
+      <categories>
+        <category>Tool</category>
+        <category>git</category>
+      </categories>
+      <tags>
+        <tag>lfs</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>ffmpeg-转码后丢帧的问题</title>
     <url>/article/3032443121.html</url>
     <content><![CDATA[<p>在生产环境的使用中，我们转码有时候会出现缺帧的情况，比如一个10s的视频，经过转码后只有了7s，这就是因为转码逻辑没有处理好，导致丢失了大量的帧。</p>
@@ -1116,42 +1158,6 @@
       </categories>
       <tags>
         <tag>ffmpeg</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>gcc-5.1.0源码安装</title>
-    <url>/article/2230395924.html</url>
-    <content><![CDATA[<p>对于一些源码的编译如poco库，需要的GCC的版本要求比较高，所以需要源码编译GCC、</p>
-<h3 id="一，源码下载"><a href="#一，源码下载" class="headerlink" title="一，源码下载"></a>一，源码下载</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">地址：</span><br><span class="line">https:&#x2F;&#x2F;ftp.gnu.org&#x2F;gnu&#x2F;gcc&#x2F;</span><br><span class="line">gcc-5.1.0 可以支持C++14</span><br></pre></td></tr></table></figure>
-<h3 id="二，依赖环境安装"><a href="#二，依赖环境安装" class="headerlink" title="二，依赖环境安装"></a>二，依赖环境安装</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cd gcc-5.1.0</span><br><span class="line">.&#x2F;contrib&#x2F;download_prerequisites</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Building GCC requires GMP 4.2+, MPFR 2.4.0+ and MPC 0.8.0+</span><br><span class="line">地址：</span><br><span class="line">ftp:&#x2F;&#x2F;gcc.gnu.org&#x2F;pub&#x2F;gcc&#x2F;infrastructure&#x2F;</span><br><span class="line"></span><br><span class="line">wget ftp:&#x2F;&#x2F;gcc.gnu.org&#x2F;pub&#x2F;gcc&#x2F;infrastructure&#x2F;gmp-6.1.0.tar.bz2</span><br><span class="line">wget ftp:&#x2F;&#x2F;gcc.gnu.org&#x2F;pub&#x2F;gcc&#x2F;infrastructure&#x2F;mpfr-3.1.4.tar.bz2</span><br><span class="line">wget ftp:&#x2F;&#x2F;gcc.gnu.org&#x2F;pub&#x2F;gcc&#x2F;infrastructure&#x2F;mpc-1.0.3.tar.gz</span><br></pre></td></tr></table></figure>
-<h3 id="三，依赖解压安装"><a href="#三，依赖解压安装" class="headerlink" title="三，依赖解压安装"></a>三，依赖解压安装</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">1，安装gmp</span><br><span class="line">tar -jxvf gmp-6.1.0.tar.bz2</span><br><span class="line">cd gmp-6.1.0</span><br><span class="line">.&#x2F;configure</span><br><span class="line">make &amp;&amp; make install</span><br><span class="line"></span><br><span class="line">error:No usable m4 in $PATH or &#x2F;usr&#x2F;5bin</span><br><span class="line">yum install m4</span><br><span class="line"></span><br><span class="line">2,安装mpfr</span><br><span class="line">tar -jxvf mpfr-3.1.4.tar.bz2</span><br><span class="line">cd mpfr-3.1.4</span><br><span class="line">.&#x2F;configure</span><br><span class="line">make &amp;&amp; make install</span><br><span class="line"></span><br><span class="line">3,安装mpc</span><br><span class="line">tar -zxvf mpc-1.0.3.tar.gz</span><br><span class="line">cd mpc-1.0.3</span><br><span class="line">.&#x2F;configure</span><br><span class="line">make &amp;&amp; make install</span><br></pre></td></tr></table></figure>
-<h3 id="四，源码安装"><a href="#四，源码安装" class="headerlink" title="四，源码安装"></a>四，源码安装</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">.&#x2F;configure  --enable-checking&#x3D;release --enable-languages&#x3D;c,c++ --disable-multilib</span><br><span class="line">make </span><br><span class="line">make install</span><br><span class="line"></span><br><span class="line">#将链接复制</span><br><span class="line">cp -vf &#x2F;usr&#x2F;local&#x2F;lib64&#x2F;libstdc++.*  &#x2F;usr&#x2F;lib64&#x2F;</span><br><span class="line">gcc -v</span><br><span class="line">gcc version 5.1.0 (GCC)</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>Cpp</category>
-        <category>gcc</category>
-      </categories>
-      <tags>
-        <tag>gcc</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>git-大文件上传管理</title>
-    <url>/article/3538252460.html</url>
-    <content><![CDATA[<h3 id="git-lfs安装和配置"><a href="#git-lfs安装和配置" class="headerlink" title="git lfs安装和配置"></a>git lfs安装和配置</h3><p>git lfs 需要客户端支持, 请根据自己的操作系统下载对应的客户端</p>
-<p><a href="https://git-lfs.github.com/">git lfs客户端下载</a></p>
-<p><code>以Centos7为例，下载客户端后运行rpm安装</code></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">rpm -i git-lfs-2.2.1-1.el7.x86_64.rpm</span><br><span class="line">git lfs install（完成初始化）</span><br></pre></td></tr></table></figure>
-<h3 id="设置管理的文件类型"><a href="#设置管理的文件类型" class="headerlink" title="设置管理的文件类型"></a>设置管理的文件类型</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#压缩包</span><br><span class="line">git lfs track *.tar *.tar.gz *.tgz *.zip *.7z</span><br><span class="line">#图片</span><br><span class="line">git lfs track *.jpg *.png *.jpeg *.bmp *.gif *.tiff</span><br><span class="line">#库</span><br><span class="line">git lfs track *.jar *.war *.so *.so.*</span><br><span class="line">#非文本文档</span><br><span class="line">git  lfs  track *.doc *.docx *.ppt *.pptx *.pdf *.xls *.xlsx</span><br><span class="line">#安装包</span><br><span class="line">git  lfs  track *.rpm *.deb *.img *.iso</span><br></pre></td></tr></table></figure>
-<p><code>设置完之后会在项目根目录下出现.gitattributes文件</code></p>
-]]></content>
-      <categories>
-        <category>Tool</category>
-        <category>git</category>
-      </categories>
-      <tags>
-        <tag>lfs</tag>
       </tags>
   </entry>
   <entry>
@@ -1190,6 +1196,24 @@
       </categories>
       <tags>
         <tag>cmd</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>gcc-5.1.0源码安装</title>
+    <url>/article/2230395924.html</url>
+    <content><![CDATA[<p>对于一些源码的编译如poco库，需要的GCC的版本要求比较高，所以需要源码编译GCC、</p>
+<h3 id="一，源码下载"><a href="#一，源码下载" class="headerlink" title="一，源码下载"></a>一，源码下载</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">地址：</span><br><span class="line">https:&#x2F;&#x2F;ftp.gnu.org&#x2F;gnu&#x2F;gcc&#x2F;</span><br><span class="line">gcc-5.1.0 可以支持C++14</span><br></pre></td></tr></table></figure>
+<h3 id="二，依赖环境安装"><a href="#二，依赖环境安装" class="headerlink" title="二，依赖环境安装"></a>二，依赖环境安装</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cd gcc-5.1.0</span><br><span class="line">.&#x2F;contrib&#x2F;download_prerequisites</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Building GCC requires GMP 4.2+, MPFR 2.4.0+ and MPC 0.8.0+</span><br><span class="line">地址：</span><br><span class="line">ftp:&#x2F;&#x2F;gcc.gnu.org&#x2F;pub&#x2F;gcc&#x2F;infrastructure&#x2F;</span><br><span class="line"></span><br><span class="line">wget ftp:&#x2F;&#x2F;gcc.gnu.org&#x2F;pub&#x2F;gcc&#x2F;infrastructure&#x2F;gmp-6.1.0.tar.bz2</span><br><span class="line">wget ftp:&#x2F;&#x2F;gcc.gnu.org&#x2F;pub&#x2F;gcc&#x2F;infrastructure&#x2F;mpfr-3.1.4.tar.bz2</span><br><span class="line">wget ftp:&#x2F;&#x2F;gcc.gnu.org&#x2F;pub&#x2F;gcc&#x2F;infrastructure&#x2F;mpc-1.0.3.tar.gz</span><br></pre></td></tr></table></figure>
+<h3 id="三，依赖解压安装"><a href="#三，依赖解压安装" class="headerlink" title="三，依赖解压安装"></a>三，依赖解压安装</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">1，安装gmp</span><br><span class="line">tar -jxvf gmp-6.1.0.tar.bz2</span><br><span class="line">cd gmp-6.1.0</span><br><span class="line">.&#x2F;configure</span><br><span class="line">make &amp;&amp; make install</span><br><span class="line"></span><br><span class="line">error:No usable m4 in $PATH or &#x2F;usr&#x2F;5bin</span><br><span class="line">yum install m4</span><br><span class="line"></span><br><span class="line">2,安装mpfr</span><br><span class="line">tar -jxvf mpfr-3.1.4.tar.bz2</span><br><span class="line">cd mpfr-3.1.4</span><br><span class="line">.&#x2F;configure</span><br><span class="line">make &amp;&amp; make install</span><br><span class="line"></span><br><span class="line">3,安装mpc</span><br><span class="line">tar -zxvf mpc-1.0.3.tar.gz</span><br><span class="line">cd mpc-1.0.3</span><br><span class="line">.&#x2F;configure</span><br><span class="line">make &amp;&amp; make install</span><br></pre></td></tr></table></figure>
+<h3 id="四，源码安装"><a href="#四，源码安装" class="headerlink" title="四，源码安装"></a>四，源码安装</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">.&#x2F;configure  --enable-checking&#x3D;release --enable-languages&#x3D;c,c++ --disable-multilib</span><br><span class="line">make </span><br><span class="line">make install</span><br><span class="line"></span><br><span class="line">#将链接复制</span><br><span class="line">cp -vf &#x2F;usr&#x2F;local&#x2F;lib64&#x2F;libstdc++.*  &#x2F;usr&#x2F;lib64&#x2F;</span><br><span class="line">gcc -v</span><br><span class="line">gcc version 5.1.0 (GCC)</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>Cpp</category>
+        <category>gcc</category>
+      </categories>
+      <tags>
+        <tag>gcc</tag>
       </tags>
   </entry>
   <entry>
@@ -1260,25 +1284,6 @@
 ]]></content>
   </entry>
   <entry>
-    <title>hexo-gulp压缩</title>
-    <url>/article/2127593710.html</url>
-    <content><![CDATA[<h3 id="插件安装"><a href="#插件安装" class="headerlink" title="插件安装"></a>插件安装</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#全局安装</span><br><span class="line">npm install gulp -g</span><br><span class="line">#站点目录安装</span><br><span class="line">npm install gulp-htmlclean gulp-htmlmin gulp-minify-css gulp-uglify --save</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p>在这里说明一下，使用该工具可以压缩 HTML、CSS、JavaScript 文件，但我并没有压缩 JavaScript 文件，因为有很大的概率会报错，实际也并不需要压缩，因为大部分 JavaScript 都已压缩过。</p>
-<p>如果你也考虑不压缩 JavaScript 文件，可以选择不安装 <code>gulp-uglify</code>。</p>
-<h3 id="gulpfile-js"><a href="#gulpfile-js" class="headerlink" title="gulpfile.js"></a>gulpfile.js</h3><p>在站点文件夹的根目录下，新建一个文件。命名为gulpfile.js</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">var gulp &#x3D; require(&#39;gulp&#39;);</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; Plugins 模块获取</span><br><span class="line">var minifycss &#x3D; require(&#39;gulp-minify-css&#39;);</span><br><span class="line">var uglify &#x3D; require(&#39;gulp-uglify&#39;);</span><br><span class="line">var htmlmin &#x3D; require(&#39;gulp-htmlmin&#39;);</span><br><span class="line">var htmlclean &#x3D; require(&#39;gulp-htmlclean&#39;);</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 压缩 css</span><br><span class="line">gulp.task(&#39;minify-css&#39;, function () &#123;</span><br><span class="line">	return gulp.src(&#39;.&#x2F;public&#x2F;**&#x2F;*.css&#39;)</span><br><span class="line">		.pipe(minifycss())</span><br><span class="line">		.pipe(gulp.dest(&#39;.&#x2F;public&#39;));</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 压缩 html</span><br><span class="line">gulp.task(&#39;minify-html&#39;, function () &#123;</span><br><span class="line">	return gulp.src(&#39;.&#x2F;public&#x2F;**&#x2F;*.html&#39;)</span><br><span class="line">		.pipe(htmlclean())</span><br><span class="line">		.pipe(htmlmin(&#123;</span><br><span class="line">			removeComments: true,</span><br><span class="line">			minifyJS: true,</span><br><span class="line">			minifyCSS: true,</span><br><span class="line">			minifyURLs: true,</span><br><span class="line">		&#125;))</span><br><span class="line">		.pipe(gulp.dest(&#39;.&#x2F;public&#39;))</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 压缩 js 不压缩 min.js</span><br><span class="line">gulp.task(&#39;minify-js&#39;, function () &#123;</span><br><span class="line">	return gulp.src([&#39;.&#x2F;public&#x2F;**&#x2F;*.js&#39;, &#39;!.&#x2F;public&#x2F;**&#x2F;*.min.js&#39;])</span><br><span class="line">		.pipe(uglify())</span><br><span class="line">		.pipe(gulp.dest(&#39;.&#x2F;public&#39;));</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 4.0 以前的写法 </span><br><span class="line">&#x2F;&#x2F; gulp.task(&#39;default&#39;, [</span><br><span class="line">  &#x2F;&#x2F;   &#39;minify-html&#39;, &#39;minify-css&#39;, &#39;minify-js&#39;</span><br><span class="line">&#x2F;&#x2F; ]);</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 4.0 以后的写法</span><br><span class="line">&#x2F;&#x2F; 执行 gulp 命令时执行的任务</span><br><span class="line">gulp.task(&#39;default&#39;, gulp.parallel(&#39;minify-html&#39;, &#39;minify-css&#39;, &#39;minify-js&#39;));</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p><code>如果不压缩 JavaScript 文件，则将上述代码中有关</code>minify-js<code>的代码删除即可</code></p>
-<h3 id="运行结果"><a href="#运行结果" class="headerlink" title="运行结果"></a>运行结果</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[10:24:57] Starting &#39;default&#39;...</span><br><span class="line">[10:24:57] Starting &#39;minify-html&#39;...</span><br><span class="line">[10:24:57] Starting &#39;minify-css&#39;...</span><br><span class="line">[10:24:57] Starting &#39;minify-js&#39;...</span><br><span class="line">[10:25:05] Finished &#39;minify-css&#39; after 8.3 s</span><br><span class="line">[10:25:05] Finished &#39;minify-js&#39; after 8.49 s</span><br><span class="line">[10:25:09] Finished &#39;minify-html&#39; after 12 s</span><br><span class="line">[10:25:09] Finished &#39;default&#39; after 12 s</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>Tool</category>
-        <category>hexo</category>
-      </categories>
-      <tags>
-        <tag>gulp</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>hexo-next主题配置</title>
     <url>/article/1968653668.html</url>
     <content><![CDATA[<p>主要记录一下自己在搭建个人博客的时候，一些配置，基本上是查阅别人的文章，这里记录一下</p>
@@ -1345,6 +1350,25 @@
       </categories>
       <tags>
         <tag>next</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>hexo-gulp压缩</title>
+    <url>/article/2127593710.html</url>
+    <content><![CDATA[<h3 id="插件安装"><a href="#插件安装" class="headerlink" title="插件安装"></a>插件安装</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#全局安装</span><br><span class="line">npm install gulp -g</span><br><span class="line">#站点目录安装</span><br><span class="line">npm install gulp-htmlclean gulp-htmlmin gulp-minify-css gulp-uglify --save</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>在这里说明一下，使用该工具可以压缩 HTML、CSS、JavaScript 文件，但我并没有压缩 JavaScript 文件，因为有很大的概率会报错，实际也并不需要压缩，因为大部分 JavaScript 都已压缩过。</p>
+<p>如果你也考虑不压缩 JavaScript 文件，可以选择不安装 <code>gulp-uglify</code>。</p>
+<h3 id="gulpfile-js"><a href="#gulpfile-js" class="headerlink" title="gulpfile.js"></a>gulpfile.js</h3><p>在站点文件夹的根目录下，新建一个文件。命名为gulpfile.js</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">var gulp &#x3D; require(&#39;gulp&#39;);</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; Plugins 模块获取</span><br><span class="line">var minifycss &#x3D; require(&#39;gulp-minify-css&#39;);</span><br><span class="line">var uglify &#x3D; require(&#39;gulp-uglify&#39;);</span><br><span class="line">var htmlmin &#x3D; require(&#39;gulp-htmlmin&#39;);</span><br><span class="line">var htmlclean &#x3D; require(&#39;gulp-htmlclean&#39;);</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 压缩 css</span><br><span class="line">gulp.task(&#39;minify-css&#39;, function () &#123;</span><br><span class="line">	return gulp.src(&#39;.&#x2F;public&#x2F;**&#x2F;*.css&#39;)</span><br><span class="line">		.pipe(minifycss())</span><br><span class="line">		.pipe(gulp.dest(&#39;.&#x2F;public&#39;));</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 压缩 html</span><br><span class="line">gulp.task(&#39;minify-html&#39;, function () &#123;</span><br><span class="line">	return gulp.src(&#39;.&#x2F;public&#x2F;**&#x2F;*.html&#39;)</span><br><span class="line">		.pipe(htmlclean())</span><br><span class="line">		.pipe(htmlmin(&#123;</span><br><span class="line">			removeComments: true,</span><br><span class="line">			minifyJS: true,</span><br><span class="line">			minifyCSS: true,</span><br><span class="line">			minifyURLs: true,</span><br><span class="line">		&#125;))</span><br><span class="line">		.pipe(gulp.dest(&#39;.&#x2F;public&#39;))</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 压缩 js 不压缩 min.js</span><br><span class="line">gulp.task(&#39;minify-js&#39;, function () &#123;</span><br><span class="line">	return gulp.src([&#39;.&#x2F;public&#x2F;**&#x2F;*.js&#39;, &#39;!.&#x2F;public&#x2F;**&#x2F;*.min.js&#39;])</span><br><span class="line">		.pipe(uglify())</span><br><span class="line">		.pipe(gulp.dest(&#39;.&#x2F;public&#39;));</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 4.0 以前的写法 </span><br><span class="line">&#x2F;&#x2F; gulp.task(&#39;default&#39;, [</span><br><span class="line">  &#x2F;&#x2F;   &#39;minify-html&#39;, &#39;minify-css&#39;, &#39;minify-js&#39;</span><br><span class="line">&#x2F;&#x2F; ]);</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 4.0 以后的写法</span><br><span class="line">&#x2F;&#x2F; 执行 gulp 命令时执行的任务</span><br><span class="line">gulp.task(&#39;default&#39;, gulp.parallel(&#39;minify-html&#39;, &#39;minify-css&#39;, &#39;minify-js&#39;));</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p><code>如果不压缩 JavaScript 文件，则将上述代码中有关</code>minify-js<code>的代码删除即可</code></p>
+<h3 id="运行结果"><a href="#运行结果" class="headerlink" title="运行结果"></a>运行结果</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[10:24:57] Starting &#39;default&#39;...</span><br><span class="line">[10:24:57] Starting &#39;minify-html&#39;...</span><br><span class="line">[10:24:57] Starting &#39;minify-css&#39;...</span><br><span class="line">[10:24:57] Starting &#39;minify-js&#39;...</span><br><span class="line">[10:25:05] Finished &#39;minify-css&#39; after 8.3 s</span><br><span class="line">[10:25:05] Finished &#39;minify-js&#39; after 8.49 s</span><br><span class="line">[10:25:09] Finished &#39;minify-html&#39; after 12 s</span><br><span class="line">[10:25:09] Finished &#39;default&#39; after 12 s</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>Tool</category>
+        <category>hexo</category>
+      </categories>
+      <tags>
+        <tag>gulp</tag>
       </tags>
   </entry>
   <entry>
@@ -1497,22 +1521,6 @@
       </tags>
   </entry>
   <entry>
-    <title>mupdf-源码安装</title>
-    <url>/article/3549577056.html</url>
-    <content><![CDATA[<h3 id="一，源码下载"><a href="#一，源码下载" class="headerlink" title="一，源码下载"></a>一，源码下载</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">直接到官网上下载源码包</span><br><span class="line">https:&#x2F;&#x2F;www.mupdf.com&#x2F;downloads&#x2F;index.html</span><br><span class="line">mupdf-1.16.1-source.tar.gz</span><br></pre></td></tr></table></figure>
-<h3 id="二，相关依赖下载"><a href="#二，相关依赖下载" class="headerlink" title="二，相关依赖下载"></a>二，相关依赖下载</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.</span><br><span class="line">You should have received a copy of the GNU Affero General Public License along with this program. If not, see http:&#x2F;&#x2F;www.gnu.org&#x2F;licenses</span><br><span class="line"></span><br><span class="line">yum install freeglut-devel</span><br></pre></td></tr></table></figure>
-<h3 id="三，编译安装"><a href="#三，编译安装" class="headerlink" title="三，编译安装"></a>三，编译安装</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">make prefix&#x3D;&#x2F;usr&#x2F;local install</span><br></pre></td></tr></table></figure>
-<h3 id="四，使用注意"><a href="#四，使用注意" class="headerlink" title="四，使用注意"></a>四，使用注意</h3><p>在cmake的项目中使用静态库的时候，你只能生成静态链接库，在生成应用的时候，链接静态库和动态库都是一样的用法</p>
-]]></content>
-      <categories>
-        <category>Media</category>
-        <category>doc</category>
-      </categories>
-      <tags>
-        <tag>mupdf</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>mysql-centos7源码安装mysql8.0</title>
     <url>/article/1044847951.html</url>
     <content><![CDATA[<pre><code>因为直接通过yum安装的是mariadb，所以我们需要通过另外的方法来进行安装
@@ -1543,6 +1551,22 @@
       </categories>
       <tags>
         <tag>mysql</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>mupdf-源码安装</title>
+    <url>/article/3549577056.html</url>
+    <content><![CDATA[<h3 id="一，源码下载"><a href="#一，源码下载" class="headerlink" title="一，源码下载"></a>一，源码下载</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">直接到官网上下载源码包</span><br><span class="line">https:&#x2F;&#x2F;www.mupdf.com&#x2F;downloads&#x2F;index.html</span><br><span class="line">mupdf-1.16.1-source.tar.gz</span><br></pre></td></tr></table></figure>
+<h3 id="二，相关依赖下载"><a href="#二，相关依赖下载" class="headerlink" title="二，相关依赖下载"></a>二，相关依赖下载</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.</span><br><span class="line">You should have received a copy of the GNU Affero General Public License along with this program. If not, see http:&#x2F;&#x2F;www.gnu.org&#x2F;licenses</span><br><span class="line"></span><br><span class="line">yum install freeglut-devel</span><br></pre></td></tr></table></figure>
+<h3 id="三，编译安装"><a href="#三，编译安装" class="headerlink" title="三，编译安装"></a>三，编译安装</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">make prefix&#x3D;&#x2F;usr&#x2F;local install</span><br></pre></td></tr></table></figure>
+<h3 id="四，使用注意"><a href="#四，使用注意" class="headerlink" title="四，使用注意"></a>四，使用注意</h3><p>在cmake的项目中使用静态库的时候，你只能生成静态链接库，在生成应用的时候，链接静态库和动态库都是一样的用法</p>
+]]></content>
+      <categories>
+        <category>Media</category>
+        <category>doc</category>
+      </categories>
+      <tags>
+        <tag>mupdf</tag>
       </tags>
   </entry>
   <entry>
@@ -1659,6 +1683,49 @@
       </categories>
       <tags>
         <tag>s3</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>s3-亚马逊oss客户端源码编译</title>
+    <url>/article/4200273252.html</url>
+    <content><![CDATA[<p>​    cpp关于亚马逊S3的客户端源码编译，aws-sdk-cpp的记录。因为项目中使用了亚马逊的oss的存储，所以需要客户端去请求，进行一些文件的上传下载等工作。</p>
+<h3 id="源码下载"><a href="#源码下载" class="headerlink" title="源码下载"></a>源码下载</h3><p>​    我们直接在GitHub上下载<a href="https://github.com/aws/aws-sdk-cpp.git">aws-sdk-cpp</a>。我们的服务器环境</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">git clone https://github.com/aws/aws-sdk-cpp.git</span><br></pre></td></tr></table></figure>
+<ul>
+<li>Ubuntu 16.04.6 LTS</li>
+<li>git version 2.7.4</li>
+<li>cmake version 3.19.3</li>
+<li>g++ (GCC) 7.4.0</li>
+</ul>
+<h3 id="编译"><a href="#编译" class="headerlink" title="编译"></a>编译</h3><p>​    编译需要先参考官方文档，有一个基本的了解</p>
+<ul>
+<li><a href="https://docs.aws.amazon.com/sdk-for-cpp/v1/developer-guide/setup-linux.html">linux下编译</a></li>
+<li><a href="https://docs.aws.amazon.com/sdk-for-cpp/v1/developer-guide/cmake-params.html#cmake-target-arch">cmake编译参数</a></li>
+</ul>
+<h4 id="依赖"><a href="#依赖" class="headerlink" title="依赖"></a>依赖</h4><p>​    我们在编译的时候需要依赖一些库：</p>
+<ul>
+<li>zlib;</li>
+<li>openssl;</li>
+<li>curl;</li>
+</ul>
+<h4 id="编译-1"><a href="#编译-1" class="headerlink" title="编译"></a>编译</h4><p>​    进入源码目录<code>aws-sdk-cpp</code></p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">cd aws-sdk-cpp</span><br><span class="line">mkdir build</span><br></pre></td></tr></table></figure>
+<p>编译静态库</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">cmake -DCMAKE_BUILD_TYPE=Release -DTARGET_ARCH=LINUX -DBUILD_SHARED_LIBS=OFF -DBUILD_ONLY=&quot;s3&quot; -DCMAKE_INSTALL_PREFIX=/usr/local/awssta ..</span><br></pre></td></tr></table></figure>
+<p>编译动态库</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">cmake -DCMAKE_BUILD_TYPE=Release -DTARGET_ARCH=LINUX -DBUILD_ONLY=&quot;s3&quot; -DCMAKE_INSTALL_PREFIX=/usr/local/aws ..</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">make -j5</span><br><span class="line">make install</span><br></pre></td></tr></table></figure>
+<h4 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h4><p>使用时先学习<a href="https://docs.aws.amazon.com/sdk-for-cpp/v1/developer-guide/programming-general.html">官网的例子</a></p>
+<ul>
+<li>自己封装<a href="https://gitee.com/helioswei/testcode/tree/master/s3/aws">的使用</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>Database</category>
+        <category>s3</category>
+      </categories>
+      <tags>
+        <tag>aws-sdk-cpp</tag>
       </tags>
   </entry>
   <entry>
