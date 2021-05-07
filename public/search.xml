@@ -41,22 +41,6 @@
       </tags>
   </entry>
   <entry>
-    <title>centos7-epel源下载</title>
-    <url>/article/3859923575.html</url>
-    <content><![CDATA[<h3 id="一，什么是epel"><a href="#一，什么是epel" class="headerlink" title="一，什么是epel"></a>一，什么是epel</h3><p><strong>EPEL的全称叫 Extra Packages for Enterprise Linux</strong> 。EPEL是由 Fedora 社区打造，为 RHEL 及衍生发行版如 CentOS、Scientific Linux 等提供高质量软件包的项目。装上了 EPEL之后，就相当于添加了一个第三方源。</p>
-<p>如果你知道rpmfusion.org的话，拿 rpmfusion 做比较还是很恰当的，rpmfusion 主要为桌面发行版提供大量rpm包，而<strong><em>EPEL则为服务器版本提供大量的rpm包，而且大多数rpm包在官方 repository 中是找不到的\</em></strong></p>
-<p>另外一个特点是<strong>绝大多数rpm包要比官方repository 的rpm包版本要来得新</strong>。所以，我们有时候在yum下载的时候如果没有找到某个包或者版本过低，可以使用这个方式来尝试。</p>
-<h3 id="二，yum下载"><a href="#二，yum下载" class="headerlink" title="二，yum下载"></a>二，yum下载</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">yum install -y epel-release</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>Linux</category>
-        <category>centos7</category>
-      </categories>
-      <tags>
-        <tag>yum</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>centos7-libreoffice安装和启动</title>
     <url>/article/3025513893.html</url>
     <content><![CDATA[<p>​    centos7下的文档转码的利器<code>libreoffice</code>，下面介绍一下centos7平台上对于这个软件的安装</p>
@@ -80,6 +64,22 @@
       </tags>
   </entry>
   <entry>
+    <title>centos7-epel源下载</title>
+    <url>/article/3859923575.html</url>
+    <content><![CDATA[<h3 id="一，什么是epel"><a href="#一，什么是epel" class="headerlink" title="一，什么是epel"></a>一，什么是epel</h3><p><strong>EPEL的全称叫 Extra Packages for Enterprise Linux</strong> 。EPEL是由 Fedora 社区打造，为 RHEL 及衍生发行版如 CentOS、Scientific Linux 等提供高质量软件包的项目。装上了 EPEL之后，就相当于添加了一个第三方源。</p>
+<p>如果你知道rpmfusion.org的话，拿 rpmfusion 做比较还是很恰当的，rpmfusion 主要为桌面发行版提供大量rpm包，而<strong><em>EPEL则为服务器版本提供大量的rpm包，而且大多数rpm包在官方 repository 中是找不到的\</em></strong></p>
+<p>另外一个特点是<strong>绝大多数rpm包要比官方repository 的rpm包版本要来得新</strong>。所以，我们有时候在yum下载的时候如果没有找到某个包或者版本过低，可以使用这个方式来尝试。</p>
+<h3 id="二，yum下载"><a href="#二，yum下载" class="headerlink" title="二，yum下载"></a>二，yum下载</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">yum install -y epel-release</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>Linux</category>
+        <category>centos7</category>
+      </categories>
+      <tags>
+        <tag>yum</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>centos7-yum的使用</title>
     <url>/article/1714992348.html</url>
     <content><![CDATA[<p>记录yum的使用</p>
@@ -93,6 +93,21 @@
       </categories>
       <tags>
         <tag>yum</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>centos7-zsh的使用和配置</title>
+    <url>/article/192192511.html</url>
+    <content><![CDATA[<p>​     本文主要是记录centos7搭建自己个性的命令行。</p>
+<h3 id="安装zsh"><a href="#安装zsh" class="headerlink" title="安装zsh"></a>安装zsh</h3><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">yum install zsh</span><br></pre></td></tr></table></figure>
+<h4 id="将其设置为默认shell"><a href="#将其设置为默认shell" class="headerlink" title="将其设置为默认shell"></a>将其设置为默认shell</h4><p>~~~`<br>chsh -s /bin/zsh<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">&#96;可以通过echo $SHELL来查看当前默认的shell，如果没有改为&#x2F;bin&#x2F;zsh,那么需要重新启动shell&#96;</span><br><span class="line"></span><br><span class="line">### 安装oh-my-zsh</span><br><span class="line"></span><br><span class="line">[地址](https:&#x2F;&#x2F;github.com&#x2F;ohmyzsh&#x2F;ohmyzsh)</span><br><span class="line"></span><br></pre></td></tr></table></figure><br>    sh -c “$(wget -O- <a href="https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)&quot;">https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)&quot;</a><br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">#### 配置文件</span><br><span class="line"></span><br><span class="line">​	默认的配置文件是在&#96;&#x2F;root&#x2F;.zshrc&#96;，可以通过配置文件来配置一下插件以及功能</span><br><span class="line"></span><br><span class="line">##### 主题修改</span><br><span class="line"></span><br><span class="line">在&#96;.zshrc&#96;中找到&#96;ZSH_THEME&#96;，即可修改主题，[主题地址](https:&#x2F;&#x2F;github.com&#x2F;ohmyzsh&#x2F;ohmyzsh&#x2F;wiki&#x2F;themes)可自己修改</span><br><span class="line"></span><br><span class="line">##### zsh扩展</span><br><span class="line"></span><br><span class="line">​	在&#96;&#x2F;root&#x2F;.zshrc&#96;中找到&#96;plugins&#96;关键字，就可以自定义启用的插件了，目前插件存放在workspace上</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure></p>
+]]></content>
+      <categories>
+        <category>Linux</category>
+        <category>centos7</category>
+      </categories>
+      <tags>
+        <tag>zsh</tag>
       </tags>
   </entry>
   <entry>
@@ -122,21 +137,6 @@
       </categories>
       <tags>
         <tag>openoffice</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>centos7-zsh的使用和配置</title>
-    <url>/article/192192511.html</url>
-    <content><![CDATA[<p>​     本文主要是记录centos7搭建自己个性的命令行。</p>
-<h3 id="安装zsh"><a href="#安装zsh" class="headerlink" title="安装zsh"></a>安装zsh</h3><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">yum install zsh</span><br></pre></td></tr></table></figure>
-<h4 id="将其设置为默认shell"><a href="#将其设置为默认shell" class="headerlink" title="将其设置为默认shell"></a>将其设置为默认shell</h4><p>~~~`<br>chsh -s /bin/zsh<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">&#96;可以通过echo $SHELL来查看当前默认的shell，如果没有改为&#x2F;bin&#x2F;zsh,那么需要重新启动shell&#96;</span><br><span class="line"></span><br><span class="line">### 安装oh-my-zsh</span><br><span class="line"></span><br><span class="line">[地址](https:&#x2F;&#x2F;github.com&#x2F;ohmyzsh&#x2F;ohmyzsh)</span><br><span class="line"></span><br></pre></td></tr></table></figure><br>    sh -c “$(wget -O- <a href="https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)&quot;">https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)&quot;</a><br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">#### 配置文件</span><br><span class="line"></span><br><span class="line">​	默认的配置文件是在&#96;&#x2F;root&#x2F;.zshrc&#96;，可以通过配置文件来配置一下插件以及功能</span><br><span class="line"></span><br><span class="line">##### 主题修改</span><br><span class="line"></span><br><span class="line">在&#96;.zshrc&#96;中找到&#96;ZSH_THEME&#96;，即可修改主题，[主题地址](https:&#x2F;&#x2F;github.com&#x2F;ohmyzsh&#x2F;ohmyzsh&#x2F;wiki&#x2F;themes)可自己修改</span><br><span class="line"></span><br><span class="line">##### zsh扩展</span><br><span class="line"></span><br><span class="line">​	在&#96;&#x2F;root&#x2F;.zshrc&#96;中找到&#96;plugins&#96;关键字，就可以自定义启用的插件了，目前插件存放在workspace上</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure></p>
-]]></content>
-      <categories>
-        <category>Linux</category>
-        <category>centos7</category>
-      </categories>
-      <tags>
-        <tag>zsh</tag>
       </tags>
   </entry>
   <entry>
@@ -338,6 +338,41 @@
       </categories>
       <tags>
         <tag>pistache</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>cpp-使用doxygen+graphviz生成函数调用流程图</title>
+    <url>/article/4085864678.html</url>
+    <content><![CDATA[<p> 使用函数调用图可以清晰的帮助自己分析源码。这里介绍一下cpp的函数调用图的生成方式。</p>
+<h2 id="工具准备"><a href="#工具准备" class="headerlink" title="工具准备"></a>工具准备</h2><h3 id="graphviz"><a href="#graphviz" class="headerlink" title="graphviz"></a>graphviz</h3><p>GraphViz是什么？GraphViz是一个开源的图片可视化的软件。它使用一个特定的DSL(领域特定语言)dot作为脚本语言，然后使用布局引擎来解析此脚本，并完成自动布局。GraphViz提供丰富的导出格式，如常用的图片格式，SVG，PDF格式等。</p>
+<h4 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h4><p><a href="http://www.graphviz.org/download/">graphviz的下载地址</a></p>
+<h3 id="doxygen"><a href="#doxygen" class="headerlink" title="doxygen"></a>doxygen</h3><p>Doxygen是一款文档生成工具，它可以从代码中提取出相应的文档，并组织，输出成各种漂亮的文档（如HTML，PDF，RTF等）</p>
+<p>有了Doxygen工具，程序员便可以在写代码的时候，直接内嵌文档，再也不需要为某个功能代码单独写文档，从而最大程度的保持了文档和代码的统一性</p>
+<p>另外，Doxygen 1.8.x版本中增加对markdown的支持，也支持内嵌部分HTML标签，从而极大的简化了文档编写难度，甚至，您可以用Doxygen生成一个静态的网站。</p>
+<p>目前Doxygen支持C/C++，Objective-C, C#，PHP等语言，支持多平台(Mac OS, Linux, Windows)，更多信息，请参考<a href="http://www.stack.nl/~dimitri/doxygen/index.html">Doxygen官方介绍</a></p>
+<h4 id="下载-1"><a href="#下载-1" class="headerlink" title="下载"></a>下载</h4><p><a href="https://www.doxygen.nl/download.html">doxygen下载地址</a></p>
+<h4 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h4><p><a href="https://cedar-renjun.github.io/2014/03/21/learn-doxygen-in-10-minutes/">这篇文章</a>介绍一些doxygen为代码生成文档的方法，可以学习。</p>
+<h2 id="函数调用图"><a href="#函数调用图" class="headerlink" title="函数调用图"></a>函数调用图</h2><h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p>将上面的两个工具安装在电脑上，直接下载windows平台的exe文件进行安装既可。</p>
+<h3 id="使用-1"><a href="#使用-1" class="headerlink" title="使用"></a>使用</h3><h4 id="运行DoxyWizard，弹出Doxygen配置界面"><a href="#运行DoxyWizard，弹出Doxygen配置界面" class="headerlink" title="运行DoxyWizard，弹出Doxygen配置界面"></a>运行DoxyWizard，弹出Doxygen配置界面</h4><h4 id="配置Wizard页面"><a href="#配置Wizard页面" class="headerlink" title="配置Wizard页面"></a>配置Wizard页面</h4><h5 id="配置Wizard-gt-Project"><a href="#配置Wizard-gt-Project" class="headerlink" title="配置Wizard-&gt;Project"></a>配置Wizard-&gt;Project</h5><p><img src="/images/doxygen/project.png" alt="project.png"></p>
+<p><strong>选择Scan recursively则递归分析源代码目录中的子目录内的源代码。</strong></p>
+<h5 id="配置Wizard-gt-Mode"><a href="#配置Wizard-gt-Mode" class="headerlink" title="配置Wizard-&gt;Mode"></a>配置Wizard-&gt;Mode</h5><p><img src="/images/doxygen/model.png" alt="model.png"></p>
+<h5 id="配置Wizard-gt-Output"><a href="#配置Wizard-gt-Output" class="headerlink" title="配置Wizard-&gt;Output"></a>配置Wizard-&gt;Output</h5><p><img src="/images/doxygen/output.png" alt="output.png"></p>
+<h5 id="配置Wizard-gt-Diagrams"><a href="#配置Wizard-gt-Diagrams" class="headerlink" title="配置Wizard-&gt;Diagrams"></a>配置Wizard-&gt;Diagrams</h5><p><img src="/images/doxygen/dia.png" alt="dia.png"></p>
+<h4 id="配置Expert页面"><a href="#配置Expert页面" class="headerlink" title="配置Expert页面"></a>配置Expert页面</h4><h5 id="配置Expert-gt-Project"><a href="#配置Expert-gt-Project" class="headerlink" title="配置Expert-&gt;Project"></a>配置Expert-&gt;Project</h5><p><img src="/images/doxygen/lang.png" alt="lang.png"></p>
+<h5 id="配置Expert-gt-Build"><a href="#配置Expert-gt-Build" class="headerlink" title="配置Expert-&gt;Build"></a>配置Expert-&gt;Build</h5><p><img src="/images/doxygen/build.png" alt="build.png"></p>
+<h5 id="配置Expert-gt-Dot"><a href="#配置Expert-gt-Dot" class="headerlink" title="配置Expert-&gt;Dot"></a>配置Expert-&gt;Dot</h5><p><img src="/images/doxygen/gra.png" alt="gra.png"></p>
+<p>由于使用了Graphviz,所以要设置Dot的选项，勾选HAVE_DOT，并设置DOT_PATH为Graphviz的bin目录</p>
+<h4 id="开始使用"><a href="#开始使用" class="headerlink" title="开始使用"></a>开始使用</h4><h5 id="进行Run页面"><a href="#进行Run页面" class="headerlink" title="进行Run页面"></a>进行Run页面</h5><p>点击Run doxygen按钮</p>
+<p><img src="/images/doxygen/run.png" alt="run.png"></p>
+<h5 id="展示生成文档"><a href="#展示生成文档" class="headerlink" title="展示生成文档"></a>展示生成文档</h5><p><img src="/images/doxygen/out.png" alt="out.png"></p>
+]]></content>
+      <categories>
+        <category>Cpp</category>
+        <category>tools</category>
+      </categories>
+      <tags>
+        <tag>doxygen</tag>
+        <tag>graphviz</tag>
       </tags>
   </entry>
   <entry>
@@ -1108,21 +1143,21 @@
       </tags>
   </entry>
   <entry>
-    <title>git-大文件上传管理</title>
-    <url>/article/3538252460.html</url>
-    <content><![CDATA[<h3 id="git-lfs安装和配置"><a href="#git-lfs安装和配置" class="headerlink" title="git lfs安装和配置"></a>git lfs安装和配置</h3><p>git lfs 需要客户端支持, 请根据自己的操作系统下载对应的客户端</p>
-<p><a href="https://git-lfs.github.com/">git lfs客户端下载</a></p>
-<p><code>以Centos7为例，下载客户端后运行rpm安装</code></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">rpm -i git-lfs-2.2.1-1.el7.x86_64.rpm</span><br><span class="line">git lfs install（完成初始化）</span><br></pre></td></tr></table></figure>
-<h3 id="设置管理的文件类型"><a href="#设置管理的文件类型" class="headerlink" title="设置管理的文件类型"></a>设置管理的文件类型</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#压缩包</span><br><span class="line">git lfs track *.tar *.tar.gz *.tgz *.zip *.7z</span><br><span class="line">#图片</span><br><span class="line">git lfs track *.jpg *.png *.jpeg *.bmp *.gif *.tiff</span><br><span class="line">#库</span><br><span class="line">git lfs track *.jar *.war *.so *.so.*</span><br><span class="line">#非文本文档</span><br><span class="line">git  lfs  track *.doc *.docx *.ppt *.pptx *.pdf *.xls *.xlsx</span><br><span class="line">#安装包</span><br><span class="line">git  lfs  track *.rpm *.deb *.img *.iso</span><br></pre></td></tr></table></figure>
-<p><code>设置完之后会在项目根目录下出现.gitattributes文件</code></p>
+    <title>gcc-5.1.0源码安装</title>
+    <url>/article/2230395924.html</url>
+    <content><![CDATA[<p>对于一些源码的编译如poco库，需要的GCC的版本要求比较高，所以需要源码编译GCC、</p>
+<h3 id="一，源码下载"><a href="#一，源码下载" class="headerlink" title="一，源码下载"></a>一，源码下载</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">地址：</span><br><span class="line">https:&#x2F;&#x2F;ftp.gnu.org&#x2F;gnu&#x2F;gcc&#x2F;</span><br><span class="line">gcc-5.1.0 可以支持C++14</span><br></pre></td></tr></table></figure>
+<h3 id="二，依赖环境安装"><a href="#二，依赖环境安装" class="headerlink" title="二，依赖环境安装"></a>二，依赖环境安装</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cd gcc-5.1.0</span><br><span class="line">.&#x2F;contrib&#x2F;download_prerequisites</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Building GCC requires GMP 4.2+, MPFR 2.4.0+ and MPC 0.8.0+</span><br><span class="line">地址：</span><br><span class="line">ftp:&#x2F;&#x2F;gcc.gnu.org&#x2F;pub&#x2F;gcc&#x2F;infrastructure&#x2F;</span><br><span class="line"></span><br><span class="line">wget ftp:&#x2F;&#x2F;gcc.gnu.org&#x2F;pub&#x2F;gcc&#x2F;infrastructure&#x2F;gmp-6.1.0.tar.bz2</span><br><span class="line">wget ftp:&#x2F;&#x2F;gcc.gnu.org&#x2F;pub&#x2F;gcc&#x2F;infrastructure&#x2F;mpfr-3.1.4.tar.bz2</span><br><span class="line">wget ftp:&#x2F;&#x2F;gcc.gnu.org&#x2F;pub&#x2F;gcc&#x2F;infrastructure&#x2F;mpc-1.0.3.tar.gz</span><br></pre></td></tr></table></figure>
+<h3 id="三，依赖解压安装"><a href="#三，依赖解压安装" class="headerlink" title="三，依赖解压安装"></a>三，依赖解压安装</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">1，安装gmp</span><br><span class="line">tar -jxvf gmp-6.1.0.tar.bz2</span><br><span class="line">cd gmp-6.1.0</span><br><span class="line">.&#x2F;configure</span><br><span class="line">make &amp;&amp; make install</span><br><span class="line"></span><br><span class="line">error:No usable m4 in $PATH or &#x2F;usr&#x2F;5bin</span><br><span class="line">yum install m4</span><br><span class="line"></span><br><span class="line">2,安装mpfr</span><br><span class="line">tar -jxvf mpfr-3.1.4.tar.bz2</span><br><span class="line">cd mpfr-3.1.4</span><br><span class="line">.&#x2F;configure</span><br><span class="line">make &amp;&amp; make install</span><br><span class="line"></span><br><span class="line">3,安装mpc</span><br><span class="line">tar -zxvf mpc-1.0.3.tar.gz</span><br><span class="line">cd mpc-1.0.3</span><br><span class="line">.&#x2F;configure</span><br><span class="line">make &amp;&amp; make install</span><br></pre></td></tr></table></figure>
+<h3 id="四，源码安装"><a href="#四，源码安装" class="headerlink" title="四，源码安装"></a>四，源码安装</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">.&#x2F;configure  --enable-checking&#x3D;release --enable-languages&#x3D;c,c++ --disable-multilib</span><br><span class="line">make </span><br><span class="line">make install</span><br><span class="line"></span><br><span class="line">#将链接复制</span><br><span class="line">cp -vf &#x2F;usr&#x2F;local&#x2F;lib64&#x2F;libstdc++.*  &#x2F;usr&#x2F;lib64&#x2F;</span><br><span class="line">gcc -v</span><br><span class="line">gcc version 5.1.0 (GCC)</span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
-        <category>Tool</category>
-        <category>git</category>
+        <category>Cpp</category>
+        <category>gcc</category>
       </categories>
       <tags>
-        <tag>lfs</tag>
+        <tag>gcc</tag>
       </tags>
   </entry>
   <entry>
@@ -1161,6 +1196,24 @@
       </tags>
   </entry>
   <entry>
+    <title>git-大文件上传管理</title>
+    <url>/article/3538252460.html</url>
+    <content><![CDATA[<h3 id="git-lfs安装和配置"><a href="#git-lfs安装和配置" class="headerlink" title="git lfs安装和配置"></a>git lfs安装和配置</h3><p>git lfs 需要客户端支持, 请根据自己的操作系统下载对应的客户端</p>
+<p><a href="https://git-lfs.github.com/">git lfs客户端下载</a></p>
+<p><code>以Centos7为例，下载客户端后运行rpm安装</code></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">rpm -i git-lfs-2.2.1-1.el7.x86_64.rpm</span><br><span class="line">git lfs install（完成初始化）</span><br></pre></td></tr></table></figure>
+<h3 id="设置管理的文件类型"><a href="#设置管理的文件类型" class="headerlink" title="设置管理的文件类型"></a>设置管理的文件类型</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#压缩包</span><br><span class="line">git lfs track *.tar *.tar.gz *.tgz *.zip *.7z</span><br><span class="line">#图片</span><br><span class="line">git lfs track *.jpg *.png *.jpeg *.bmp *.gif *.tiff</span><br><span class="line">#库</span><br><span class="line">git lfs track *.jar *.war *.so *.so.*</span><br><span class="line">#非文本文档</span><br><span class="line">git  lfs  track *.doc *.docx *.ppt *.pptx *.pdf *.xls *.xlsx</span><br><span class="line">#安装包</span><br><span class="line">git  lfs  track *.rpm *.deb *.img *.iso</span><br></pre></td></tr></table></figure>
+<p><code>设置完之后会在项目根目录下出现.gitattributes文件</code></p>
+]]></content>
+      <categories>
+        <category>Tool</category>
+        <category>git</category>
+      </categories>
+      <tags>
+        <tag>lfs</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>git-常用的命令</title>
     <url>/article/2063445917.html</url>
     <content><![CDATA[<p>&nbsp;&nbsp;&nbsp;&nbsp;记录一些git常用的命令，便于在长时间不用时能够有个地方查阅，下面的几个是经常用到的。在windows下使用git，许多朋友都说无法使用一些状态（修改，保存，提交）图标，是因为图标显示不是git本身的功能呢，我们需要下载TortoiseGit才能使用图标。</p>
@@ -1196,24 +1249,6 @@
       </categories>
       <tags>
         <tag>cmd</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>gcc-5.1.0源码安装</title>
-    <url>/article/2230395924.html</url>
-    <content><![CDATA[<p>对于一些源码的编译如poco库，需要的GCC的版本要求比较高，所以需要源码编译GCC、</p>
-<h3 id="一，源码下载"><a href="#一，源码下载" class="headerlink" title="一，源码下载"></a>一，源码下载</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">地址：</span><br><span class="line">https:&#x2F;&#x2F;ftp.gnu.org&#x2F;gnu&#x2F;gcc&#x2F;</span><br><span class="line">gcc-5.1.0 可以支持C++14</span><br></pre></td></tr></table></figure>
-<h3 id="二，依赖环境安装"><a href="#二，依赖环境安装" class="headerlink" title="二，依赖环境安装"></a>二，依赖环境安装</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cd gcc-5.1.0</span><br><span class="line">.&#x2F;contrib&#x2F;download_prerequisites</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Building GCC requires GMP 4.2+, MPFR 2.4.0+ and MPC 0.8.0+</span><br><span class="line">地址：</span><br><span class="line">ftp:&#x2F;&#x2F;gcc.gnu.org&#x2F;pub&#x2F;gcc&#x2F;infrastructure&#x2F;</span><br><span class="line"></span><br><span class="line">wget ftp:&#x2F;&#x2F;gcc.gnu.org&#x2F;pub&#x2F;gcc&#x2F;infrastructure&#x2F;gmp-6.1.0.tar.bz2</span><br><span class="line">wget ftp:&#x2F;&#x2F;gcc.gnu.org&#x2F;pub&#x2F;gcc&#x2F;infrastructure&#x2F;mpfr-3.1.4.tar.bz2</span><br><span class="line">wget ftp:&#x2F;&#x2F;gcc.gnu.org&#x2F;pub&#x2F;gcc&#x2F;infrastructure&#x2F;mpc-1.0.3.tar.gz</span><br></pre></td></tr></table></figure>
-<h3 id="三，依赖解压安装"><a href="#三，依赖解压安装" class="headerlink" title="三，依赖解压安装"></a>三，依赖解压安装</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">1，安装gmp</span><br><span class="line">tar -jxvf gmp-6.1.0.tar.bz2</span><br><span class="line">cd gmp-6.1.0</span><br><span class="line">.&#x2F;configure</span><br><span class="line">make &amp;&amp; make install</span><br><span class="line"></span><br><span class="line">error:No usable m4 in $PATH or &#x2F;usr&#x2F;5bin</span><br><span class="line">yum install m4</span><br><span class="line"></span><br><span class="line">2,安装mpfr</span><br><span class="line">tar -jxvf mpfr-3.1.4.tar.bz2</span><br><span class="line">cd mpfr-3.1.4</span><br><span class="line">.&#x2F;configure</span><br><span class="line">make &amp;&amp; make install</span><br><span class="line"></span><br><span class="line">3,安装mpc</span><br><span class="line">tar -zxvf mpc-1.0.3.tar.gz</span><br><span class="line">cd mpc-1.0.3</span><br><span class="line">.&#x2F;configure</span><br><span class="line">make &amp;&amp; make install</span><br></pre></td></tr></table></figure>
-<h3 id="四，源码安装"><a href="#四，源码安装" class="headerlink" title="四，源码安装"></a>四，源码安装</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">.&#x2F;configure  --enable-checking&#x3D;release --enable-languages&#x3D;c,c++ --disable-multilib</span><br><span class="line">make </span><br><span class="line">make install</span><br><span class="line"></span><br><span class="line">#将链接复制</span><br><span class="line">cp -vf &#x2F;usr&#x2F;local&#x2F;lib64&#x2F;libstdc++.*  &#x2F;usr&#x2F;lib64&#x2F;</span><br><span class="line">gcc -v</span><br><span class="line">gcc version 5.1.0 (GCC)</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>Cpp</category>
-        <category>gcc</category>
-      </categories>
-      <tags>
-        <tag>gcc</tag>
       </tags>
   </entry>
   <entry>
@@ -1284,6 +1319,25 @@
 ]]></content>
   </entry>
   <entry>
+    <title>hexo-gulp压缩</title>
+    <url>/article/2127593710.html</url>
+    <content><![CDATA[<h3 id="插件安装"><a href="#插件安装" class="headerlink" title="插件安装"></a>插件安装</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#全局安装</span><br><span class="line">npm install gulp -g</span><br><span class="line">#站点目录安装</span><br><span class="line">npm install gulp-htmlclean gulp-htmlmin gulp-minify-css gulp-uglify --save</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>在这里说明一下，使用该工具可以压缩 HTML、CSS、JavaScript 文件，但我并没有压缩 JavaScript 文件，因为有很大的概率会报错，实际也并不需要压缩，因为大部分 JavaScript 都已压缩过。</p>
+<p>如果你也考虑不压缩 JavaScript 文件，可以选择不安装 <code>gulp-uglify</code>。</p>
+<h3 id="gulpfile-js"><a href="#gulpfile-js" class="headerlink" title="gulpfile.js"></a>gulpfile.js</h3><p>在站点文件夹的根目录下，新建一个文件。命名为gulpfile.js</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">var gulp &#x3D; require(&#39;gulp&#39;);</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; Plugins 模块获取</span><br><span class="line">var minifycss &#x3D; require(&#39;gulp-minify-css&#39;);</span><br><span class="line">var uglify &#x3D; require(&#39;gulp-uglify&#39;);</span><br><span class="line">var htmlmin &#x3D; require(&#39;gulp-htmlmin&#39;);</span><br><span class="line">var htmlclean &#x3D; require(&#39;gulp-htmlclean&#39;);</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 压缩 css</span><br><span class="line">gulp.task(&#39;minify-css&#39;, function () &#123;</span><br><span class="line">	return gulp.src(&#39;.&#x2F;public&#x2F;**&#x2F;*.css&#39;)</span><br><span class="line">		.pipe(minifycss())</span><br><span class="line">		.pipe(gulp.dest(&#39;.&#x2F;public&#39;));</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 压缩 html</span><br><span class="line">gulp.task(&#39;minify-html&#39;, function () &#123;</span><br><span class="line">	return gulp.src(&#39;.&#x2F;public&#x2F;**&#x2F;*.html&#39;)</span><br><span class="line">		.pipe(htmlclean())</span><br><span class="line">		.pipe(htmlmin(&#123;</span><br><span class="line">			removeComments: true,</span><br><span class="line">			minifyJS: true,</span><br><span class="line">			minifyCSS: true,</span><br><span class="line">			minifyURLs: true,</span><br><span class="line">		&#125;))</span><br><span class="line">		.pipe(gulp.dest(&#39;.&#x2F;public&#39;))</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 压缩 js 不压缩 min.js</span><br><span class="line">gulp.task(&#39;minify-js&#39;, function () &#123;</span><br><span class="line">	return gulp.src([&#39;.&#x2F;public&#x2F;**&#x2F;*.js&#39;, &#39;!.&#x2F;public&#x2F;**&#x2F;*.min.js&#39;])</span><br><span class="line">		.pipe(uglify())</span><br><span class="line">		.pipe(gulp.dest(&#39;.&#x2F;public&#39;));</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 4.0 以前的写法 </span><br><span class="line">&#x2F;&#x2F; gulp.task(&#39;default&#39;, [</span><br><span class="line">  &#x2F;&#x2F;   &#39;minify-html&#39;, &#39;minify-css&#39;, &#39;minify-js&#39;</span><br><span class="line">&#x2F;&#x2F; ]);</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 4.0 以后的写法</span><br><span class="line">&#x2F;&#x2F; 执行 gulp 命令时执行的任务</span><br><span class="line">gulp.task(&#39;default&#39;, gulp.parallel(&#39;minify-html&#39;, &#39;minify-css&#39;, &#39;minify-js&#39;));</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p><code>如果不压缩 JavaScript 文件，则将上述代码中有关</code>minify-js<code>的代码删除即可</code></p>
+<h3 id="运行结果"><a href="#运行结果" class="headerlink" title="运行结果"></a>运行结果</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[10:24:57] Starting &#39;default&#39;...</span><br><span class="line">[10:24:57] Starting &#39;minify-html&#39;...</span><br><span class="line">[10:24:57] Starting &#39;minify-css&#39;...</span><br><span class="line">[10:24:57] Starting &#39;minify-js&#39;...</span><br><span class="line">[10:25:05] Finished &#39;minify-css&#39; after 8.3 s</span><br><span class="line">[10:25:05] Finished &#39;minify-js&#39; after 8.49 s</span><br><span class="line">[10:25:09] Finished &#39;minify-html&#39; after 12 s</span><br><span class="line">[10:25:09] Finished &#39;default&#39; after 12 s</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>Tool</category>
+        <category>hexo</category>
+      </categories>
+      <tags>
+        <tag>gulp</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>hexo-next主题配置</title>
     <url>/article/1968653668.html</url>
     <content><![CDATA[<p>主要记录一下自己在搭建个人博客的时候，一些配置，基本上是查阅别人的文章，这里记录一下</p>
@@ -1350,25 +1404,6 @@
       </categories>
       <tags>
         <tag>next</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>hexo-gulp压缩</title>
-    <url>/article/2127593710.html</url>
-    <content><![CDATA[<h3 id="插件安装"><a href="#插件安装" class="headerlink" title="插件安装"></a>插件安装</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#全局安装</span><br><span class="line">npm install gulp -g</span><br><span class="line">#站点目录安装</span><br><span class="line">npm install gulp-htmlclean gulp-htmlmin gulp-minify-css gulp-uglify --save</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p>在这里说明一下，使用该工具可以压缩 HTML、CSS、JavaScript 文件，但我并没有压缩 JavaScript 文件，因为有很大的概率会报错，实际也并不需要压缩，因为大部分 JavaScript 都已压缩过。</p>
-<p>如果你也考虑不压缩 JavaScript 文件，可以选择不安装 <code>gulp-uglify</code>。</p>
-<h3 id="gulpfile-js"><a href="#gulpfile-js" class="headerlink" title="gulpfile.js"></a>gulpfile.js</h3><p>在站点文件夹的根目录下，新建一个文件。命名为gulpfile.js</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">var gulp &#x3D; require(&#39;gulp&#39;);</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; Plugins 模块获取</span><br><span class="line">var minifycss &#x3D; require(&#39;gulp-minify-css&#39;);</span><br><span class="line">var uglify &#x3D; require(&#39;gulp-uglify&#39;);</span><br><span class="line">var htmlmin &#x3D; require(&#39;gulp-htmlmin&#39;);</span><br><span class="line">var htmlclean &#x3D; require(&#39;gulp-htmlclean&#39;);</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 压缩 css</span><br><span class="line">gulp.task(&#39;minify-css&#39;, function () &#123;</span><br><span class="line">	return gulp.src(&#39;.&#x2F;public&#x2F;**&#x2F;*.css&#39;)</span><br><span class="line">		.pipe(minifycss())</span><br><span class="line">		.pipe(gulp.dest(&#39;.&#x2F;public&#39;));</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 压缩 html</span><br><span class="line">gulp.task(&#39;minify-html&#39;, function () &#123;</span><br><span class="line">	return gulp.src(&#39;.&#x2F;public&#x2F;**&#x2F;*.html&#39;)</span><br><span class="line">		.pipe(htmlclean())</span><br><span class="line">		.pipe(htmlmin(&#123;</span><br><span class="line">			removeComments: true,</span><br><span class="line">			minifyJS: true,</span><br><span class="line">			minifyCSS: true,</span><br><span class="line">			minifyURLs: true,</span><br><span class="line">		&#125;))</span><br><span class="line">		.pipe(gulp.dest(&#39;.&#x2F;public&#39;))</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 压缩 js 不压缩 min.js</span><br><span class="line">gulp.task(&#39;minify-js&#39;, function () &#123;</span><br><span class="line">	return gulp.src([&#39;.&#x2F;public&#x2F;**&#x2F;*.js&#39;, &#39;!.&#x2F;public&#x2F;**&#x2F;*.min.js&#39;])</span><br><span class="line">		.pipe(uglify())</span><br><span class="line">		.pipe(gulp.dest(&#39;.&#x2F;public&#39;));</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 4.0 以前的写法 </span><br><span class="line">&#x2F;&#x2F; gulp.task(&#39;default&#39;, [</span><br><span class="line">  &#x2F;&#x2F;   &#39;minify-html&#39;, &#39;minify-css&#39;, &#39;minify-js&#39;</span><br><span class="line">&#x2F;&#x2F; ]);</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 4.0 以后的写法</span><br><span class="line">&#x2F;&#x2F; 执行 gulp 命令时执行的任务</span><br><span class="line">gulp.task(&#39;default&#39;, gulp.parallel(&#39;minify-html&#39;, &#39;minify-css&#39;, &#39;minify-js&#39;));</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p><code>如果不压缩 JavaScript 文件，则将上述代码中有关</code>minify-js<code>的代码删除即可</code></p>
-<h3 id="运行结果"><a href="#运行结果" class="headerlink" title="运行结果"></a>运行结果</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[10:24:57] Starting &#39;default&#39;...</span><br><span class="line">[10:24:57] Starting &#39;minify-html&#39;...</span><br><span class="line">[10:24:57] Starting &#39;minify-css&#39;...</span><br><span class="line">[10:24:57] Starting &#39;minify-js&#39;...</span><br><span class="line">[10:25:05] Finished &#39;minify-css&#39; after 8.3 s</span><br><span class="line">[10:25:05] Finished &#39;minify-js&#39; after 8.49 s</span><br><span class="line">[10:25:09] Finished &#39;minify-html&#39; after 12 s</span><br><span class="line">[10:25:09] Finished &#39;default&#39; after 12 s</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>Tool</category>
-        <category>hexo</category>
-      </categories>
-      <tags>
-        <tag>gulp</tag>
       </tags>
   </entry>
   <entry>
@@ -1521,39 +1556,6 @@
       </tags>
   </entry>
   <entry>
-    <title>mysql-centos7源码安装mysql8.0</title>
-    <url>/article/1044847951.html</url>
-    <content><![CDATA[<pre><code>因为直接通过yum安装的是mariadb，所以我们需要通过另外的方法来进行安装
-</code></pre><h3 id="一，下载mysql"><a href="#一，下载mysql" class="headerlink" title="一，下载mysql"></a>一，下载mysql</h3><p>地址：<a href="https://dev.mysql.com/downloads/repo/yum/">https://dev.mysql.com/downloads/repo/yum/</a>。选择对应版本下载</p>
-<h3 id="二，使用wget下载"><a href="#二，使用wget下载" class="headerlink" title="二，使用wget下载"></a>二，使用wget下载</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">在网站上看对应的版本号就好了</span><br><span class="line">wget https:&#x2F;&#x2F;repo.mysql.com&#x2F;&#x2F;mysql80-community-release-el7-3.noarch.rpm</span><br></pre></td></tr></table></figure>
-<h3 id="三，安装mysql的源"><a href="#三，安装mysql的源" class="headerlink" title="三，安装mysql的源"></a>三，安装mysql的源</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">yum -y localinstall mysql80-community-release-el7-1.noarch.rpm（对应版本）</span><br></pre></td></tr></table></figure>
-<h3 id="四，在线安装mysql"><a href="#四，在线安装mysql" class="headerlink" title="四，在线安装mysql"></a>四，在线安装mysql</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">yum -y install mysql-community-server</span><br></pre></td></tr></table></figure>
-<h3 id="五，linux下设置不区分大小写"><a href="#五，linux下设置不区分大小写" class="headerlink" title="五，linux下设置不区分大小写"></a>五，linux下设置不区分大小写</h3><ol>
-<li>使用root账号登录，修改/etc/my.cnf；</li>
-<li>在[mysqld]下加入一行：lower_case_table_names=1</li>
-<li>mysqld –user=mysql –lower-case-table-names=1 –initialize-insecure datadir=/var/lib/mysql</li>
-</ol>
-<h3 id="六，设置开机自启"><a href="#六，设置开机自启" class="headerlink" title="六，设置开机自启"></a>六，设置开机自启</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">systemctl enable mysqld</span><br><span class="line">systemctl daemon-reload</span><br></pre></td></tr></table></figure>
-<h3 id="七，修改本地root的密码"><a href="#七，修改本地root的密码" class="headerlink" title="七，修改本地root的密码"></a>七，修改本地root的密码</h3><ol>
-<li>查看root账户的临时密码，vim  /var/log/mysqld.log</li>
-<li>登录mysql，mysql -u root -p，输入1，中的临时密码</li>
-<li>ALTER USER ‘root‘@’localhost’ IDENTIFIED BY ‘你的密码’;<br>修改密码为 你的密码 (备注：默认密码策略要求密码必须是大小写字母数字特殊字母的组合，至少8位)</li>
-</ol>
-<h3 id="八，-修改密码策略要求"><a href="#八，-修改密码策略要求" class="headerlink" title="八， 修改密码策略要求"></a>八， 修改密码策略要求</h3><p>~默认密码策略要求密码是大小写字母+数字+特殊字母的组合而且最少8位,不需要修改策略的可以跳过这步~</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">1，查看密码的策略</span><br><span class="line">SHOW VARIABLES LIKE &#39;validate_password%&#39;;</span><br><span class="line">2，修改密码的策略</span><br><span class="line">set global validate_password.check_user_name&#x3D;OFF;</span><br><span class="line">set global validate_password.policy&#x3D;LOW;</span><br><span class="line">set global validate_password.length&#x3D;4;</span><br><span class="line">flush privileges;</span><br><span class="line">3，修改密码</span><br><span class="line">ALTER USER &#39;root&#39;@&#39;localhost&#39; IDENTIFIED BY &#39;root&#39;;</span><br></pre></td></tr></table></figure>
-<h3 id="九，设置允许远程连接"><a href="#九，设置允许远程连接" class="headerlink" title="九，设置允许远程连接"></a>九，设置允许远程连接</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">1，重新登录mysql；</span><br><span class="line">2，选择mysql表； use mysql;</span><br><span class="line">3,更新表的内容；</span><br><span class="line">update user set Host&#x3D;&#39;%&#39; where User&#x3D;&#39;root&#39;;</span><br><span class="line">GRANT ALL PRIVILEGES ON *.* TO &#39;root&#39;@&#39;%&#39; WITH GRANT OPTION;&#x2F;&#x2F;可能会报错，执行两次即可（不成功就再flush privileges;一次）</span><br></pre></td></tr></table></figure>
-<h3 id="十，查看加密方式"><a href="#十，查看加密方式" class="headerlink" title="十，查看加密方式"></a>十，查看加密方式</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">select user, host, plugin, authentication_string from user\G;查看加密方式</span><br><span class="line">8.0加密方式（caching_sha2_password）有些客户端还不支持 ，导致客户端连接失败，所以使用mysql_native_password加密</span><br><span class="line">alter user &#39;root&#39;@&#39;%&#39; identified with mysql_native_password by &#39;helios2020&#39;;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<h3 id="九，卸载mysql"><a href="#九，卸载mysql" class="headerlink" title="九，卸载mysql"></a>九，卸载mysql</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">删除Mysql</span><br><span class="line">yum remove mysql mysql-server mysql-libs mysql-server;</span><br><span class="line">find &#x2F; -name mysql 将找到的相关东西delete掉</span><br><span class="line">(rm -rf &#x2F;var&#x2F;lib&#x2F;mysql)；</span><br><span class="line">rpm -qa|grep mysql(查询出来的东东yum remove掉)</span><br><span class="line">rm &#x2F;etc&#x2F;my.cnf （可能不存在）</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>Database</category>
-        <category>mysql</category>
-      </categories>
-      <tags>
-        <tag>mysql</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>mupdf-源码安装</title>
     <url>/article/3549577056.html</url>
     <content><![CDATA[<h3 id="一，源码下载"><a href="#一，源码下载" class="headerlink" title="一，源码下载"></a>一，源码下载</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">直接到官网上下载源码包</span><br><span class="line">https:&#x2F;&#x2F;www.mupdf.com&#x2F;downloads&#x2F;index.html</span><br><span class="line">mupdf-1.16.1-source.tar.gz</span><br></pre></td></tr></table></figure>
@@ -1588,6 +1590,39 @@
       </categories>
       <tags>
         <tag>cmd</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>mysql-centos7源码安装mysql8.0</title>
+    <url>/article/1044847951.html</url>
+    <content><![CDATA[<pre><code>因为直接通过yum安装的是mariadb，所以我们需要通过另外的方法来进行安装
+</code></pre><h3 id="一，下载mysql"><a href="#一，下载mysql" class="headerlink" title="一，下载mysql"></a>一，下载mysql</h3><p>地址：<a href="https://dev.mysql.com/downloads/repo/yum/">https://dev.mysql.com/downloads/repo/yum/</a>。选择对应版本下载</p>
+<h3 id="二，使用wget下载"><a href="#二，使用wget下载" class="headerlink" title="二，使用wget下载"></a>二，使用wget下载</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">在网站上看对应的版本号就好了</span><br><span class="line">wget https:&#x2F;&#x2F;repo.mysql.com&#x2F;&#x2F;mysql80-community-release-el7-3.noarch.rpm</span><br></pre></td></tr></table></figure>
+<h3 id="三，安装mysql的源"><a href="#三，安装mysql的源" class="headerlink" title="三，安装mysql的源"></a>三，安装mysql的源</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">yum -y localinstall mysql80-community-release-el7-1.noarch.rpm（对应版本）</span><br></pre></td></tr></table></figure>
+<h3 id="四，在线安装mysql"><a href="#四，在线安装mysql" class="headerlink" title="四，在线安装mysql"></a>四，在线安装mysql</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">yum -y install mysql-community-server</span><br></pre></td></tr></table></figure>
+<h3 id="五，linux下设置不区分大小写"><a href="#五，linux下设置不区分大小写" class="headerlink" title="五，linux下设置不区分大小写"></a>五，linux下设置不区分大小写</h3><ol>
+<li>使用root账号登录，修改/etc/my.cnf；</li>
+<li>在[mysqld]下加入一行：lower_case_table_names=1</li>
+<li>mysqld –user=mysql –lower-case-table-names=1 –initialize-insecure datadir=/var/lib/mysql</li>
+</ol>
+<h3 id="六，设置开机自启"><a href="#六，设置开机自启" class="headerlink" title="六，设置开机自启"></a>六，设置开机自启</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">systemctl enable mysqld</span><br><span class="line">systemctl daemon-reload</span><br></pre></td></tr></table></figure>
+<h3 id="七，修改本地root的密码"><a href="#七，修改本地root的密码" class="headerlink" title="七，修改本地root的密码"></a>七，修改本地root的密码</h3><ol>
+<li>查看root账户的临时密码，vim  /var/log/mysqld.log</li>
+<li>登录mysql，mysql -u root -p，输入1，中的临时密码</li>
+<li>ALTER USER ‘root‘@’localhost’ IDENTIFIED BY ‘你的密码’;<br>修改密码为 你的密码 (备注：默认密码策略要求密码必须是大小写字母数字特殊字母的组合，至少8位)</li>
+</ol>
+<h3 id="八，-修改密码策略要求"><a href="#八，-修改密码策略要求" class="headerlink" title="八， 修改密码策略要求"></a>八， 修改密码策略要求</h3><p>~默认密码策略要求密码是大小写字母+数字+特殊字母的组合而且最少8位,不需要修改策略的可以跳过这步~</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">1，查看密码的策略</span><br><span class="line">SHOW VARIABLES LIKE &#39;validate_password%&#39;;</span><br><span class="line">2，修改密码的策略</span><br><span class="line">set global validate_password.check_user_name&#x3D;OFF;</span><br><span class="line">set global validate_password.policy&#x3D;LOW;</span><br><span class="line">set global validate_password.length&#x3D;4;</span><br><span class="line">flush privileges;</span><br><span class="line">3，修改密码</span><br><span class="line">ALTER USER &#39;root&#39;@&#39;localhost&#39; IDENTIFIED BY &#39;root&#39;;</span><br></pre></td></tr></table></figure>
+<h3 id="九，设置允许远程连接"><a href="#九，设置允许远程连接" class="headerlink" title="九，设置允许远程连接"></a>九，设置允许远程连接</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">1，重新登录mysql；</span><br><span class="line">2，选择mysql表； use mysql;</span><br><span class="line">3,更新表的内容；</span><br><span class="line">update user set Host&#x3D;&#39;%&#39; where User&#x3D;&#39;root&#39;;</span><br><span class="line">GRANT ALL PRIVILEGES ON *.* TO &#39;root&#39;@&#39;%&#39; WITH GRANT OPTION;&#x2F;&#x2F;可能会报错，执行两次即可（不成功就再flush privileges;一次）</span><br></pre></td></tr></table></figure>
+<h3 id="十，查看加密方式"><a href="#十，查看加密方式" class="headerlink" title="十，查看加密方式"></a>十，查看加密方式</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">select user, host, plugin, authentication_string from user\G;查看加密方式</span><br><span class="line">8.0加密方式（caching_sha2_password）有些客户端还不支持 ，导致客户端连接失败，所以使用mysql_native_password加密</span><br><span class="line">alter user &#39;root&#39;@&#39;%&#39; identified with mysql_native_password by &#39;helios2020&#39;;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h3 id="九，卸载mysql"><a href="#九，卸载mysql" class="headerlink" title="九，卸载mysql"></a>九，卸载mysql</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">删除Mysql</span><br><span class="line">yum remove mysql mysql-server mysql-libs mysql-server;</span><br><span class="line">find &#x2F; -name mysql 将找到的相关东西delete掉</span><br><span class="line">(rm -rf &#x2F;var&#x2F;lib&#x2F;mysql)；</span><br><span class="line">rpm -qa|grep mysql(查询出来的东东yum remove掉)</span><br><span class="line">rm &#x2F;etc&#x2F;my.cnf （可能不存在）</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>Database</category>
+        <category>mysql</category>
+      </categories>
+      <tags>
+        <tag>mysql</tag>
       </tags>
   </entry>
   <entry>
